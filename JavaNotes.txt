@@ -1,0 +1,716 @@
+
+
+  variables :
+  ==========
+
+  1)variable is used to store the value temporarily.
+    A variable is a location in memory(storgae area) to hold data.
+   
+    Note:
+    ======
+    Java is a statically-typed language.
+    It means that all variables must be declared before they can be used.    
+
+
+    syntax create variable in java:
+    ===============================
+    accessmodifier datatype  variablename ;
+    default
+    private
+    protected
+    public    
+
+
+    In java the varibales are
+
+    1)instance variable --
+     =================
+     is also called non-static variables.
+
+     a)memory is allocated at Heap area of JVM 
+
+     b)For every object their is a separate copy of instance of variables
+      available(memory)-- at run time
+
+    c)we can declare the instance variable inside the class
+      before or outside  the methods.
+
+    ex:
+   ====
+    public class Ex1{
+               ///instance variables
+        int b; --declaration
+        int a=10; --declarattion and initialization
+         int a,b;
+         int a=10,b=30,c;
+     //methods
+       public static void main(String args[]){
+    }
+  }
+
+
+    2)static variable-- 
+  =================
+
+   a)For static variables the memory is allocated method area of JVM
+
+   b)the memory is allocated at once
+
+    c)we can declare the variable inside the class  before the method
+   using static keyword.
+  
+   d)instance variable cannot be used directly inside the static
+     context(static block,static method) and if we want to access
+     the  instance variables inside static context using object.
+
+   e) static variables and methods recommended way to access with help of ClassName.
+  
+   ex:
+   ===
+   public class Ex2{
+
+     static int a=10; //static variable.
+    //methods  
+ 
+   }                     
+
+
+  3)local variable --
+   ==============
+  a)For local variable the memory is allocated
+                   at stack  in JVM
+     
+  b) Local variable is declared inside a method or block.
+   
+  c)scope the local variable with in the method or block ==>{}.
+
+  d) A local variable which declared must be initialized before you use it.
+
+
+  ex:
+  ====
+
+    public class Ex3
+   {
+
+   public void methodOne(){
+
+    int a=10;
+
+    }
+
+    }
+
+
+
+  JAVANAMING CONVENTIONS:
+  ==========================
+
+  1)CLASSNAME:
+  =============
+  Class name is a noun  and  the classname should start with Capital Letter and secondWord also
+  followed by Capital.
+
+  Ex:
+  ===
+  class  StudentRegistration{
+
+
+  }
+
+ 2) methodName:
+ =============
+  method name is verb   and the method name should startwith small letterand next word
+  start with capital Letter(camelCase)
+
+
+  Ex:
+  ===
+  class Employee{
+
+   void getEmployeeDetails(){
+
+    //statements
+   }
+
+   }
+
+  3) variableName:
+  ==============
+
+   variableName is also camelCase
+
+  ex:
+  ===
+
+   class Employee{
+ 
+     int empId;
+     int empName;
+     int sal;
+
+   }
+
+  
+
+  Example:
+  =======
+
+  write a java program to declare the variables
+  =======================================
+
+  class ExampleOnVariables{
+
+  int  studentNo;
+  String studentName;
+  float  studentMarks;   //instance variables
+
+
+ public static void main(String args[]){
+
+  System.out.println(studentNo);
+  System.out.println(studentName);
+  System.out.println(studentMarks);
+
+ }
+
+
+ }
+
+
+
+ Example2:
+ ========
+  WAP named as ExampleOnVariables1  and declare 
+  three instance variables  of type int and 
+  create a method named as  getSum() ,return type of method is void and perform sum of two numbers
+  and display the sum of two numbers.
+
+
+
+
+
+
+ sol:
+ ===
+ public class ExampleOnVariables1{
+
+ int num1;
+ int num2;
+ int res;
+
+ public void getSum(){
+
+ res=num1+num2;
+ System.out.println("sum of two numbers is "+res);
+
+ }
+
+ public static void main(String args[]){
+
+  ExampleOnVariables1 env1 = new ExampleOnvariables1();
+  env1.getSum();
+
+ }}
+ }
+
+
+ oops:
+ =====
+
+  1)class
+  2)Object
+  3)Inheritance
+  4)Encapsulation
+  5)Abstraction(Interfaces)
+  6)Polymorphism
+
+ Class:
+ ======
+
+  A class is Blue print(template) for an Object.
+
+  A class is user defined Datatype.
+
+  Example:
+  --------
+  Class as a Sketch (prototype) or plan of house.
+  it contains all the details about the no of floors,doors,windows..etc.
+  Based on these plan descriptions we built the house. House is an Object.
+
+
+ syntax for  creating a class:
+ ============================
+
+ class classname
+ {
+   //Datamemebers(variables)        //to specify object properties 
+   //member methods   // to specify object functionality or actions.
+
+ }
+
+ Object:
+ =======
+
+ An  Object which exists phsically in the real world.
+
+ An object is an instance of a class(initalization of an object) -->will discuss more this on constructors Topic.
+
+ An object can contain properties(fields) and Actions(behvaiours).
+
+ In java we represent Properties(fields) in the form of datamembers(variables)
+
+ In java we represent Actions(behaviours) in the form of member methods.
+
+ to define Object properties and Actions we require class.
+
+ to perfrom any operations in java  we require Class(template).
+
+  example:
+  =======
+  Chair is an Object
+
+  properites of chair:- color,material,shape,wheels..etc
+
+  Actions of chair  --  movieable(),seatAdjustable()
+
+  sol:
+  =====
+
+  class Chair
+ {
+
+  String color="black";
+  String material="plastic";
+
+  int wheels = 4; //properties
+
+  public void movieable(){  //actions
+
+  System.out.println("Chair is moveable");
+
+ }
+
+ }
+
+
+ How to create object for class:
+ ===============================
+
+ 1) new operator:
+= ===============
+
+  Using  new operator we can create the Object for a class
+
+  syntax:
+ =======
+
+  classname  referencename = new classname(); //it will allocates memory in JVM On HeapMemory.
+
+  ex:
+  ===
+
+  Chair c = new Chair();
+
+
+  to call the instance data members and instance methods;
+  ========================================================
+
+  syntax:
+  =======
+
+   referencename.variablename  //to call instance variables
+
+   referencename.methodname() // to call instance methods
+
+   ex:
+  ====
+
+  System.out.println(c.color);
+  System.out.println(c.wheels); //to call instance variables
+
+   c.movieable();//to call instance method
+
+
+  to call static datamembers and static methods:
+  ==============================================
+
+  syntax:
+  ========
+
+  classname.variable  --- to call a static variable
+
+  classname.methodname --to call static methods.
+
+
+ Operators:
+ =========
+
+ 1)Arithmatic operators:
+ ===================
+ this operators are used to perfrom calculations between two operands.
+
+ +   -- ADDITION
+ -     --SUBSTRACTION
+ *   --MULTIPLICATION
+ /    --DIVISION     --- IT WILL RETRUN QUOTIENT
+
+ %    -- MODULES  ---IT WILL RETURN REMAINDER
+
+
+ 2)Relational operators:
+ ==================
+
+  >    GREATER THAN
+  >=    GREATER THAN OR EQUALS TO
+  <     LESSTHAN
+  <=     LESSTHAN OR EQUALS TO
+  !=     NOT EQUALS TO
+  ==    EQUALS TO 
+
+ 3)Logical operators:
+ ================
+  &&  --- logical and
+  ||      --logical or
+  ^      --logical XOR
+  !     --- logical Not
+
+4)Increment and Decrement operators
+  
+   ++,--,+=,-=,%=
+
+ Example:
+ =======
+
+ 1)WAP  to perform addition,substraction,division,modules.
+  and display sum of numbers,sub of numbers or.......
+
+
+
+
+
+  Conditional operator:
+  =================
+  this operator is used to make Conditional Expressions.
+
+  syntax:
+  ======
+  Datatype variableName =Expression1?Expression2:Expression3;
+
+   if Expression1 condition is matched it will return expression2
+.
+   if Expression 1 condition is not matched it will retrun Express3
+
+
+
+  Ex:
+  ===
+
+  int a=10;
+  int b=20;
+
+  int value1=(a<b)?a:b;
+
+  int value2=(a>b)?a:b;
+
+
+
+
+
+ Conditional Statements:
+ ======================
+  1)if
+  ===
+
+  syntax:
+  =======
+  if(condition){
+  
+  //true statments;
+  }
+
+  note:
+  =====
+  In if condition it contains only one statement braces
+  are optional but this statment should not be initilization statement.
+
+
+
+  Example:
+  =======
+  1)WAp to compare two int variables and print which is greater.
+   using if-else condition.
+
+
+  if-else
+  ======
+    syntax:
+    ======
+    if(condition){
+   
+      //true statments   
+    
+    }else{
+ 
+      //else /false statements
+     }
+
+
+
+
+
+  if-else-if:
+  ===========
+  to check multiple conditions
+
+  syntax:
+  ======
+
+  if(condition1){
+
+  //statements
+  
+   }else if(condition2){
+   //statements
+ 
+   }else{
+       //statements
+   }
+
+  ex:
+   ===
+    WAp to compare three int variables and print which is greater.
+    using if-else-if condition and logical operators (&& or ||).
+
+
+
+  switch-case:
+  ===========
+   to check multiple condition based on expression
+
+    syntax:
+    =======
+    switch(expresssion){
+
+       case  cond1 : statements;
+                       break;
+       case  cond2 : statements;
+                        break;
+        case cond3 : statements;
+                       break;
+        case cond4 : statements;
+                       break; 
+        default : statement;
+    }
+
+    Example 
+    ++++++++
+    wAp to perform arthematic operations using switch case expresssion .
+    
+
+
+   Iterative statments:  Loops
+   =====================+++++===
+
+   Loops are used to repeat a block of code.
+   
+   Example:
+   -------
+    If you want to show a message 10 times, then rather than typing
+    the same code or message 10 times , you can use a loop.
+
+    In Java, there are three types of loops.
+
+    >while loop
+    >do...while loop
+    >for loop
+
+
+   While loop:
+   ===========
+    while loop is used to run a specific code until a certain condition is met.
+
+   to repeat the statements until the condition become true.
+
+   syntax:
+   =======
+
+   initialize a variable;
+
+    while(condition)
+    {
+    //statements;
+
+    //increment/decrement
+
+    }
+
+   ex:
+   ==
+   Write a  java program to display Numbers from 1 to 10
+   Write a java pgroam to sum of 10 Numbers only.
+   write a program to display multiplication table of 2 using while loop;
+
+
+
+
+
+  sol:
+  ===
+
+   public class ExampleOnWhile{
+
+   public static void main(String args[]){
+
+   int i=1;
+    int n=2;
+
+   while(i<=10){
+
+   System.out.println(n+ " X " +i+" = "+(n*i));
+   i++;    //i=i+1; or //i+=1
+
+   }}
+  }
+
+ 2) WAP to print 1 to 10 integers using while loop.
+
+   sol:
+  ===
+
+   public class ExampleOnIntegers{
+
+   public static void main(String args[]){
+
+   int i=1;
+
+   while(i<=10){
+
+   System.out.println(i);
+  i++
+  }
+
+ }
+ }
+
+ for loop
+ ========
+
+ syntax:
+ =======
+
+  for(initilization;condition;increment/decrement){
+
+  //statements
+
+  }
+
+  ex:
+  ===
+ Write a  java program to display Numbers from 1 to 10
+ Write a java pgroam to sum of 10 Numbers only
+
+  Assign: WAP to display multiplication table of 5 using for loop;
+
+ sol:
+ ====
+ public class ExampleOnFor{
+ public static void main(String args[]){
+
+ int n=5;
+
+ for(int i=1;i<=10;i++){
+
+ System.out.println(n+" X "+i+" = "+(n*i));
+
+ }
+  }
+ }
+
+
+  do-while loop
+  =============
+   do..while loop is similar to while loop.
+   However, the body of do..while loop is executed once before the condition is checked .
+
+
+  syntax:
+   =======
+	initilization variable;
+   do{
+
+   //statements;
+   //increment/decrement
+
+    }while(condition);
+
+  note:
+  =====
+  the statements will execute atleast one time before checking the condition.
+
+
+
+ Example:
+ =======
+   Write a  java program to display Numbers from 1 to 10
+   Write a java program to sum of 10 Numbers only
+  Assign: write a java program to print 1 to 10 integers using do-while loop.
+  WAP to print multiplication table of 4
+
+
+ 
+
+sol:
+   ===
+  public class ExampleOndoWhile{
+
+  public static void main(String args[]){
+
+     int i=1;
+   do{
+        System.out.println(i);
+     i++;
+    }while(i<=10);
+  }
+ 
+
+Assigment:
+==========
+ 1)WAP to check given number is prime number or not.
+ 2)WAP to check given year is a leap year or not
+ 3)WAP to fibnoic series from 1 to 10
+
+ 
+ for -foreach loop ---from jdk 1.5 
+ ===================================
+
+ In JDK 1.5 introduced a new for loop known as 
+ foreach loop or enhanced for loop, 
+ which enables you to traverse the complete array or collection object sequentially 
+ without using an index variable.
+
+  syntax:
+  ========
+  for(type of array/collection variableName : Object of array/collection){
+
+ //statements;
+
+  }
+
+   
+  break :
+  ========
+  The break statement in java terminated the loop immediately and
+  the control of the progrem moves to the next statement.
+
+
+  continue:
+  =========
+  The continue statements skips the current iteration of a loop.
+
+  After the continue the statement, the program moves to the end of the loop.
+
+
+
+
+
