@@ -11,7 +11,6 @@
     Java is a statically-typed language.
     It means that all variables must be declared before they can be used.    
 
-
     syntax create variable in java:
     ===============================
     accessmodifier datatype  variablename ;
@@ -19,7 +18,6 @@
     private
     protected
     public    
-
 
     In java the varibales are
 
@@ -341,6 +339,193 @@
   classname.variable  --- to call a static variable
 
   classname.methodname --to call static methods.
+
+
+  How to define methods:
+   ======================
+
+     1) instance methods or concrete methods /non-static methods
+     --------------------------------------------------------------
+
+    syntax:
+    ========
+     AccessModifer returntype methodname(if any arguments){
+
+     //to perform certain a task
+
+    }
+      note:
+     ======
+
+     AccessModifer:-(public,protected,private,default)
+      return type :- primitive datatypes or object References
+                     if not primitive or object it must be void(empty).
+
+    ex:
+    ===
+     void  methodOne(){
+
+      //any statements
+
+      }
+
+     or
+
+     public  int getAddition(int x,int x){
+  
+    //logic
+    //return type of variable
+    }
+
+    or
+
+    protected float getEmpSalay(int id){
+
+    //logic to get the salary based on id
+     //return;
+    }
+
+
+   static methods:
+   ===============
+
+    A static method is method is declared using a keyword called
+     static.
+
+   syntax:
+   ========
+
+    accessmodifiers static  returntype methodname(if any arguemnts){
+
+     //
+
+     }
+
+  ex:
+  ====
+
+    public static void main(String args[]){
+
+   //logic
+    }
+
+
+    Abstract Method:
+    ================
+
+    A abstract method is a method , it  contains  only method declaration
+    but not definition .
+
+    syntax:
+    =======
+
+     public abstract retruntype methodname(if any arguments);
+      ex:
+      public abstract void methodOne();
+
+     note:
+     =====
+     if a class contain atleast one abstract method then compiler will
+     force the user or Developer to declare the class as abstract.
+
+
+   Example:
+   =======
+     1) WAP  named as ExampleOnMethods 
+     a) create a instance method(getEmpSal) which return int type value and
+      perform sum of two numbers by passing values to method.
+
+     b)create a static method named as studentTotalMarks(three parameters of type int)
+      and return the sum of the three parameters
+
+
+
+
+   sol:
+    ===
+  public class ExampleOnMethods{
+      
+  public  int getEmpSal(int x,int y){
+      
+        int z=x+y;
+        return z;
+    
+     }
+
+    public static int studentTotalMarks(int m1,int m2, int m3){
+       
+                 int total=m1+m2+m3;
+
+                return total;        
+     }
+     public static void main(String args[]){
+
+        ExampleOnMethods enm =new  ExampleOnMethods();
+   
+                int res   =     enm.getEmpSal(1000,3000);//calling instance method
+               
+        int res1=   ExampleOnMethods.studentTotalMarks(45,60,36); //calling static method
+
+               System.out.println("sum of employee salaries : "+res);
+              System.out.println("sum of marsk of a student : "+res1);
+    } 
+
+}
+
+Inheritance:
+  ============
+   Acquiring the properties and methods  from one class to
+   another class is called inheritance.
+
+     or
+
+   Acquiring the properties and methods from Parent Class(super class) to 
+   Child Class(subclass) is called inheritance.
+
+   the main advantage of inheritance is code  reuseability.
+
+    By using extend keyword  we can get the properties and method from 
+    parent class to child class.
+
+    Inheritance is  also called  as IS-A a relation.
+
+   note:
+   =====
+   --  It is recommended to create the object for child class
+    in inheritance concept.
+
+   --In java every class by default extends from Object class.
+
+   -- Object is the super class for all the classes.
+
+
+  syntax:
+  =======
+
+  public  class Parent {
+
+   //data members;
+
+   //member methods;
+
+  }
+
+   public class Child extends Parent{
+
+
+   //it acquires the datamembers and members from parent
+
+  //and it child class data members and member methods.
+     
+   public static void main(String args){
+
+   Child c = new Child();
+
+   //using child object we can call parent class datamemebrs and members.
+
+  //using child object we can call it own data memeber and member methods.
+
+ }
 
 
  Operators:
