@@ -896,6 +896,646 @@ Assigment:
   After the continue the statement, the program moves to the end of the loop.
 
 
+ Abstraction:
+ ============
+ abstraction is a process of hideing implementation details
+ and showing useful information to user is called abstraction.
+
+ The advantage of abstraction is secuirty.
+
+ we can acheive full abstraction in java 
+ using interfaces and abstract classes
+
+ We can achieve multiple inheritance by implementing multiple interfaces.
+
+ ex:
+ ===
+ ATM--withdrawal a money
+
+note:
+======
+we can declare the class as abstract but even it doesnot contain
+any abstract method to acheive security i.e, for the class
+it will not allow to create  object for the class directly.
+
+ex:
+====
+
+ public abstract class Ex1{
+
+ //instance methods
+  and abstract methods
+ }
+
+
+ Interface:
+ ==========
+
+ --> An interface which contains set of abstract  methods.
+
+ -->Interface used for SRS(software requirement specification or abstract).
+
+ -->An interface contain variables and these variable must be static and final(constants)
+
+-->  By using implements keyworkd we can provide implementation for the abstract methods.
+
+There are a few things to keep in mind when using an Interface in Java:
+------------------------------------------------------------------------
+The same signature must be used when overriding interface methods.
+Interface methods must be implemented in classes that are not abstract.
+Zero, one, or more interfaces can be implemented by a class at a time.
+An interface in Java can extend another interface just like a class extends another class.
+
+   syntax:
+  =======
+
+  public interface InterfaceName{
+
+   //constant variables;
+
+   //abstract methods
+   
+   accessmodifiers abstract returntype methodName(if any parameters);
+
+
+   }
+
+ -->once the interface is created who will provide the implementation,  
+    developer is responsible to provide implementaions for the interface
+
+ --> How to provide implementation
+    to provide implementations a class must implements the 
+    interface and provide the implementation for all the abstract methods.
+
+  note:
+ =====
+
+  1)if we not provide implementation for any one abstract  method then
+  declare the class as abstract.
+
+ 2)we can not create the object for abstract class directly.
+
+ 3) to create the object for the abstract class,create one more
+  class which extends from abstract class  and provide
+  the implementation for the abstract method
+
+ 4) create a object for new created class which extends from 
+   abstract class
+
+ 5) call the data members and memeber methods of it own class
+   as well as abstract  class
+
+
+Example:
+========
+
+  1) create a interface  named as MyApp
+
+  2) this interface contain two abstracts methods
+     a)public abstract int getSum(int x,int y);
+    b)public abstract  int getAddition(int x,int y,int z);
+
+  3) create a class named as ExampleOnInterface   which implements
+    MyApp interface 
+   note:- provide implementation for all abstract methods.
+
+  4) create a Object for implementation class and call those methods.
+
+
+
+
+
+
+
+Sol:
+-----
+interface:
+=======
+
+public interface MyApp{
+
+  public abstract int getSum(int x,int y);
+   public abstract int getAdditions(int x,int y,int z);
+
+}
+
+Implementation Class
+=================
+
+public class ExampleOnInterface implements  MyApp{
+
+     public int getSum( int x,int y){
+      
+      int z=x+y;
+      
+      return z;   
+
+    }
+
+    public int getAddition(int x,int y,int z){
+   
+        return x+y+z;
+   }
+
+
+public static void main(String args[]){
+
+ExampleOnInterface eoi = new ExampleOnInterface();
+
+    int res =     eoi.getSum(40,50);
+    System.out.println("sum of two numbers is : "+res);
+   
+    int res1 = eoi.getAddition(30,40,30);
+    System.out.println("Sum of three numbers is :"+res1)
+   
+ //Interface Reference variable Holding its implementation class Object
+
+   MyApp   mp = new ExampleOnInterface();
+
+    int result = mp.getSum(50,50);
+
+    System.out.println("sum of two numbers is : using interface reference : "+result);
+          
+   int result2 = mp.getAddition(50,50,60);
+
+    System.out.println("sum of three numbers is : using interface reference : "+result2);
+
+}
+
+
+}
+
+
+
+
+
+Example:2
+=========
+  1) create a interface named as MyInterface
+
+  2) this Interface contain abstract methods 
+
+   a) int methodOne();
+    b) String methodTwo(String s);
+    c) void  methodThree();
+
+  3)create a class named as ExImp1 which implements the interface
+  MyInterface 
+  note:-  provide the implementation for two methods methodOne
+         and methodTwo.
+         Then declare the class as abstract
+
+  4)create a one more class named as ExImp2 extends from above class
+  ExImp1 and provide the implementation for abstract method
+   methodThree();
+  5) create a object for ExImp2 class and call the methods
+
+
+
+
+
+
+
+
+public interface MyInterface{
+
+       public abstract int methodOne();
+      public abstract  String methodTwo(String s);
+       public abstract void methodThree();
+}
+
+public class ExImp1 implements MyInterface{
+
+    public int methodOne(){
+    int a=10;
+   System.out.println("we are in method One");
+   return a;
+   }
+
+    public String methodTwo(String s){
+    
+     return "we are in methodTwo of ExImpl Class"
+    }
+
+
+}
+
+
+4)create a one more class named as ExImp2 extends from above class
+  ExImp1 and provide the implementation for abstract method
+   methodThree();
+5) create a object for ExImp2(two ways) class and call the methods
+   
+
+public class ExImp2 extends ExImp1{
+
+public void methodThree(){
+
+System.out.println("we are in method Three of ExImp2");
+
+}
+
+ public static void main(String args[]){
+
+    ExImp2 ex2 = new ExImp2();
+   
+    String wc = ex2.methodTwo("Welcome");
+   System.out.println(wc);
+   
+     ex2.methodThree();
+
+}
+
+
+
+
+}
+
+
+Example3:
+========
+a)
+public interface I1{
+
+     public abstract String getMessage();
+     void display();
+     
+}
+public interface I2 extends I1{
+
+   public abstract String getMessage();
+   void methodTwo();
+
+}
+
+b) create a class named as ExampleOnInterface2 which
+  will provide the implementation for I2(I2 interface inherits  the properties and
+                                                                  abstract methods from I1)
+
+sol:
+===
+
+public class ExampleOnInterface2 implements I2{
+
+   public String getMessage(){
+
+    return "welcome to java we are working on interface"
+   }
+
+   public void methodTwo(){
+   
+    System.out.println("we are in methodTwo");
+   }
+
+   public void display(){
+ 
+    System.out.println("we are in display method ");
+    }
+
+    public static void main(String args[]){
+
+      ExampleOnInterface2 ei2 = new ExampleOnInterface2();
+        
+        System.out.println(ei2.getMessage());
+      
+      ei2.methodTwo();
+      ei2.display();
+     
+
+   }
+
+}
+
+
+
+
+
+
+
+create a object for class in other ways:
+========================================
+
+1)clone
+
+2)factorymethod
+
+3)Difference between Interface and abstract class
+
+
+note:
+=====
+1)till jdk1.7 the interface contains only abstracts method
+   from jdk 1.8 the sun people added one functionality in interface
+   i.e, we can define instance methods inside interface
+    
+   and the defined methods inside interface must be default.
+
+2) based on above concept execute one example and copy inthe
+  document.
+
+
+note:
+=====
+suppose a interface doesnot contain any abstract methods(empty)
+then this type of interface called as marker interface or Tag interface
+
+ex:
+====
+
+interface MyEx{
+
+
+}
+
+Ex:
+===
+Serializbale --java.io packages
+
+
+
+
+
+
+
+
+  Encapsulation:
+  ==============  
+
+  Encapuslation is process of wrapping or binding the
+  data members(variables) and member methods functionalities as single unit .
+
+  ex:
+  ====
+  class
+
+  In real time javabean class is called as Encapsulation class(we can achieve basic data hiding).
+
+  what is javabean class ?
+ 
+  it a class which contain private access modifiers of instance variables
+  and based on that instance variable the class contains
+  setter methods and  getter methods...etc
+
+  note:
+  =====
+  In spring,Hibernate frameworks the java bean class will called as Pojo class
+  (plain old java object)/DTO(Data Transfer Object) 
+
+  ex:
+  ===
+
+  public class Employee{
+
+  private int empid;
+  private  String empName;
+  private  float sal;
+
+  //setters and getters
+
+  public void setEmpId(int empid){
+
+   this.empid=empid;
+
+  }  
+  public void setEmpName(String empName){
+
+    this.empName=empName;
+  }  
+
+  public void setSal(float sal){
+
+    this.sal = sal;
+  }
+
+  public int getEmpId(){
+   
+    return  this.empid;
+ 
+   }
+
+  public String getEmpName(){
+
+     return this.empName;
+  }
+   public float getSal(){
+
+       return this.sal;
+   }
+
+
+}
+
+ note:
+ ======
+ In eclipseIDE we can generate getter and setter methods
+ in class rightclik-->source-->generate setters and getters-->selectall
+                                         -->finish.
+
+    method signature:
+    =================
+    syntax :-
+    ---------
+    methodname(datatype of parameters );
+    
+    ex:
+    ===
+     public int getSum(int x,int y){
+
+     //logic t perform sum of two numbers
+
+     }
+
+    method signature:
+    ==================
+     getSum(int,int);
+
+
+   Polymorphism:
+   =============
+
+    polymorphism is means many forms.
+
+    A superclass Reference variable holding its subclass object
+    is called polymorphism.(polymorphic)
+
+    we can acheive polymorphism in java using method overloading
+     and method overrriding.
+
+   1)method overloading or compile time polymorphism or early binding:
+   ===================================================================
+
+   A class which contain one or more methods which consists of same methodname
+   and differ in arguments is called method overloading.
+
+   we can acheive method overloading with a class.
+
+   rules for methodloading:
+   ========================
+
+   1) different in no of arguments.
+   2)different in  type of arguments,
+ 
+   ex:
+   ====
+
+   1) create a class which contain multiple methods with same 
+   method name to perform sum.
+
+   sol:
+   ----
+
+    public class ExampleOnMethodOverload{
+
+    public  int getSum(int x,int y){
+
+      int z=x+y;
+      
+       return z;
+      
+    }
+
+     public int getSum(int x,int y,int z)
+     {
+         return x+y+z;
+     }
+   
+     public void  methodOne(int x,float y){
+      
+       System.out.println(x+" "+y);
+
+      }
+
+     public void methodOne(float x,int y){
+
+      System.out.println(x+" "+y);   
+    }
+ 
+    }
+
+
+
+  Automatic promotion types in method overloading:
+  ==========================================
+
+  if calling any method in method overloading ,compiler may not found the method based
+  on referenced type compiler will not throw any errror message
+  immediately,it will check for next level reference datatype based
+  on the any method available it will execute other wise
+  you will get error.
+
+
+  byte ->short->int->long->float->double
+
+   or 
+
+  char ->int->long->float->double
+
+
+ ex:
+ ===
+  public class ExampleTypePromotion {
+
+  public void methodOne(int a){
+    
+  System.out.println("int value of a is "+a);    
+     
+  }
+
+   public void methodOne(float a){
+    
+   System.out.println("float value of a "+a);    
+     
+   }
+
+   public void methodOne(double a){
+    
+   System.out.println("double value of a "+a);    
+     
+   }
+
+     public static void main(String args[]){
+       
+       ExampleTypePromotion ept =new ExampleTypePromotion();
+      
+      ept.methodOne(10); 
+      ept.methodOne(10.5);
+
+      ept.methodOne('a');
+
+    
+
+    }
+
+  }
+
+   note:
+   ======
+   compiler is responsible to perform or to execute the 
+   methods based on method signature  is called method resolution
+   (decision) ,the decision taken at compile time based on argument referenced type.
+
+
+  MethodOverriding or run time ploymorphism or late binding:
+  ===========================================================
+
+  A method is override from parent class to child class with
+  same method signature along with same arguments and 
+  same return type of parent class method.(@override)
+
+  using inheritance concept we can perform method overriding.
+
+  ex:
+  ===
+   public class ExampleOnOverride
+    {
+
+    public void methodOne(){
+        
+     System.out.println("we are in method one of ExampleOnoverride");
+
+    }
+   }
+
+   public class TestOnMethodOverride extends ExampleOnOverride
+   {
+
+     public void methodOne(){
+
+     System.out.println("we are in methodOne of TestChild class");
+
+    }
+
+   public static void main(String args[]){
+
+    TestOnMethodOverride tmd = new TestOnMethodOverride();
+    
+     tmd.methodOne();    
+  
+     
+   }
+
+  }
+
+
+  note:
+  ======
+
+  In method overriding the method resolution(decision) will
+  take at run time based on Object reference type.
+
+  For A super class Reference variable Holding its sub class Object Execution:
+  ===========================================================
+  ExampleOnOverride tmd1 = new TestOnMethodOverride();
+    tmd1.methodOne();
+
+  1)first it will check the method reference in Super class  and based on
+   method signature if available it will  check same methodSignature in child class(override) , 
+   if available  it will execute child class method.
+
+  2)If method signature not available in super class  and the same method signature 
+   savailable in child class ,it will not execute child class method it will throw an error.
+
+
 
 
 
