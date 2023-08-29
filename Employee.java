@@ -1,34 +1,17 @@
-package com.demo;
+package com.training.arrays;
 
 public class Employee {
-    //the private access modifier -> scope with in class
+    
+	 int empId;
+	 String empName;
+	 float sal;
 	
-	private int empId;
-	private String empName;
-	private float empSal;
-	
-	public int getEmpId() {
-		return empId;
-	}
-	public void setEmpId(int empId) {
+	public Employee(int empId, String empName, float sal) {
+		super();
 		this.empId = empId;
-	}
-	public String getEmpName() {
-		return empName;
-	}
-	public void setEmpName(String empName) {
 		this.empName = empName;
+		this.sal = sal;
 	}
-	public float getEmpSal() {
-		return empSal;
-	}
-	public void setEmpSal(float empSal) {
-		this.empSal = empSal;
-	}
-	
-	
-	
-	
 	
 	
 }
