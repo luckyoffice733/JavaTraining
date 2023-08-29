@@ -1,3 +1,265 @@
+JAVA:
+=====
+
+  what is java?
+
+  Object oriented Programming language and Platform independent language,
+  java was developed by james gosling in 1995.
+
+  jdk--1.7 java is object oriented programming lanaguage.
+
+  
+  What is latest version of version?
+ 
+   jdk 1.8 --object oriented and Functional programming language
+            (lambda expressions,streams,jondi api).
+
+   jdk -1.9 -- Object oriented and Functional Programming langauge.
+
+           --Additional funtionality is called JS shell
+
+
+   to check which version of java is installed in system:
+ =---------------------------------------------------------
+
+  cmd-> javac -version --jdk -- system independent -- tocompile
+
+  cmd-> java -version  --jre -- system dependent -- to run
+
+
+   write a simple java program to print welcome message:
+  ==========================================================
+
+  syntax:
+  =======
+
+   class <classname>
+
+   {
+
+    public static void main(String args[]){
+
+    //statements;
+
+
+   }
+
+   }
+  
+  steps:
+  ======
+
+ 1) create a file and the save the file with .java Extension
+
+ 2) write a java code inside the file.java
+
+ 3)to compile a java program
+
+  syntax:
+ -======
+
+
+ javac Filename.java
+
+
+ 4) to run the java program
+
+ syntax:
+  ======
+
+  java Filename
+
+
+ex1:
+=====
+
+ public class Ex1{
+
+  public static void main(String args[]){
+
+  System.out.print("welcome the java"); //same line
+
+  System.out.println("welcome the java");//place the cursor in next line
+
+ }
+
+ }
+
+
+note:
+======
+
+1)If we are creating any class with out any access modifier then
+by default the class will have default acces modifier.
+
+2) if class contain Default access modifier then the class name
+   and Saved filename.java Need not be same.
+
+3) if class contain public access modifier then, the class name
+    and saved filename.java should be same.
+
+4)  A class can contain default,public access modifiers.
+
+5) Inner class can contain private,protected,static..access modifiers.
+
+
+
+ comments:
+ =========
+
+   1)single line comments
+   =======================
+
+   syntax:
+  =======
+
+   // comments
+
+
+   2)multiple line comments:
+    ==========================
+
+    syntax:
+      ========
+
+    /*
+
+    statements
+
+     */
+ 
+
+   
+
+
+
+
+
+API:
+====
+
+APPLICATION PROGRMMAMING INTERFACE.
+
+API IS TEXT DOC OR PDF WHICH CONTAIN PACKAGES ,SUBPACKAGES,
+ALONG WITH INTERFACES AND CLASSES.
+
+
+1)J2SE --API  -- STANDALONE APPLICATION ---JDK
+
+2)J2EE ---API  -- SERVLETS,JSP,eJB -- TO DEVELOP WEB APPLICATION.
+
+3)JDBC ---API --  THROUGH JAVAPROGRAM TO CONNECT THE DATABASE
+                    AND PERFROM SQL OPERATONS.
+                   (HIBERATE,IBATES--FRAMWORK)
+
+4)JME -- API ---  TO DEVELOP micro or MOBILE APPLICATION.
+
+
+
+API:
+====
+ API IS SPEcficiATIONs OR RULES OR GUIDELINES TO 
+   DEVELOP A JAVA PROGRAM.
+
+  SUN MICRO-SYSTEM PROVIDED  THE IMPLEMENTATION FOR J2SE API
+   AND GIVEN IN THE FORM OF SOFTWARE CALLED JDK.
+
+
+J2EE API:
+=========
+
+SERVER VENDORS ARE RESPONSIBLE TO PROVIDE IMPLEMENTAION FOR 
+J2EE API AND GIVEN THE SOFTWARE INTHE FORM OF .jar
+
+SERVERS:
+========
+
+TOMCAT --- servlet-api.jar,jsp-api.jar
+
+TOMCAT/LIB/.jars
+
+
+JDBC API:
+==========
+DATABASE  VENDORS ARE RESPONSIBLE TO PROVIDE THE IMPLEMENTATION
+FOR JDBC API AND GIVEN THE SOFTWARE IN THE FORM .jar
+
+EX:
+===
+
+ORACLE -- ojdbc.jar,ojdbc14.jar
+
+MYSQL --- mysql-connector-bin-version.jar
+
+
+
+  Datatypes:
+  ==========
+  java  contain eight primitive datatypes
+
+   Integer Datatypes:
+  ================
+   1)byte -size is 1 byte(8bits)  --range -128to 127 -default value-0
+
+   2)short -size is 2 bytes --range -32768 to 32767 --default value -0
+
+   3)int - size is 4 bytes -- range -2147483648 to 21747483647 
+                                --default-value 0
+                                                           
+   4)long -- size is 8 bytes --default value is 0
+
+    Floating point Datatypes:
+   ---------------------------------------
+
+   5)float -- to store the decimal point values(5 to 6 --scale)
+
+      --size 4 bytes ---default value-- 0.0 
+     ex:-- float a=10.12345 --10 is precision nd 123---scale
+
+
+    6)double :--to store the decimal point values(15 to 16 --scale)
+         --size 8 bytes --default value-- 0.0
+
+    7)char:-- to store characters values.
+   
+    --size is 2 bytes --default value- '\u0000'
+
+   8) boolean :- to store logical values(true nd false) --size is 1 bit
+
+         --default value is -- false.
+
+
+ Note:
+ =====
+ ==> f  or  l is a literals to store float and Long values into a variables
+
+     By default compile will treat as int  we need to specify compiler has to 
+     read as long by specifying 
+     literal l or L
+ 
+     long a=10l;
+
+
+     float b = 20.0f;
+
+
+
+   Object Referenced Datatypes:
+   =============================
+
+     1)String --is class available in java.lang Package  
+
+   note:
+  =====
+
+  Any predefined class will act as Referenced types.
+   Default value for the Referenced Types is = null
+
+  ex:
+  ===
+
+    String s;
+
 
 
   variables :
@@ -11,6 +273,7 @@
     Java is a statically-typed language.
     It means that all variables must be declared before they can be used.    
 
+
     syntax create variable in java:
     ===============================
     accessmodifier datatype  variablename ;
@@ -18,6 +281,7 @@
     private
     protected
     public    
+
 
     In java the varibales are
 
@@ -135,9 +399,7 @@
 
   3) variableName:
   ==============
-
    variableName is also camelCase
-
   ex:
   ===
 
@@ -150,7 +412,6 @@
    }
 
   
-
   Example:
   =======
 
@@ -341,7 +602,80 @@
   classname.methodname --to call static methods.
 
 
-  How to define methods:
+
+  typeCasting:
+  =========
+  There are  two typecasting
+
+  1) Widening casting or implicit casting:
+  ================================
+
+  converting one datatype of a variable  into other data type.
+
+  note:
+  ====
+  it convert lower datatype to higher datatype
+
+   byte->short->int->long->float->double
+    or
+   char->int->long->float->double
+
+
+  2)Narrowing casting or Explicity casting:
+  ================================
+  Converting higher datatype of a variable into Lower datatype.
+  with help of  type cast() operator .
+
+  syntax:
+  ======
+  (specify the dataype)
+
+
+
+
+  Example :
+  ========
+
+  1) write a java program to convert one datatype into another data type.
+
+  sol:
+  ===
+
+    public class ExampleOnCasting{
+
+    public static void main(String args[]){
+ 
+    int a=10;
+ 
+    double b = a; //widening casting or implicit casting
+
+    System.out.println("the value of a variable is "+b);
+
+
+    double d = 20.0;
+
+    int c = (int)d; //narrowing casting or explicit casting
+
+    System.out.println("the value of a variable is "+c);
+
+    float x =(float) d; //converting double to float
+
+    System.out.println(x);
+
+    long aa = 30;
+
+    float y= aa; //converting long to float 
+
+    System.out.println(y);
+
+  }
+ 
+ }
+
+
+ 
+
+   How to define methods:
    ======================
 
      1) instance methods or concrete methods /non-static methods
@@ -441,6 +775,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
    sol:
     ===
   public class ExampleOnMethods{
@@ -473,7 +818,7 @@
 }
 
 Inheritance:
-  ============
+============
    Acquiring the properties and methods  from one class to
    another class is called inheritance.
 
@@ -482,12 +827,23 @@ Inheritance:
    Acquiring the properties and methods from Parent Class(super class) to 
    Child Class(subclass) is called inheritance.
 
-   the main advantage of inheritance is code  reuseability.
+   The most important use of inheritance in Java is code reusability. 
+   The code that is present in the parent class can be directly used by the child class.
 
-    By using extend keyword  we can get the properties and method from 
+    By using extends keyword  we can get the properties and methods from 
     parent class to child class.
 
     Inheritance is  also called  as IS-A a relation.
+
+    In Java, inheritance is an is-a relationship. 
+    That is, we use inheritance only if there exists an is-a relationship        
+    between two classes. For example,
+
+	Car is a Vehicle
+	Orange is a Fruit
+	Surgeon is a Doctor
+	Dog is an Animal
+	Here, Car can inherit from Vehicle, Orange can inherit from Fruit, and so on.
 
    note:
    =====
@@ -509,9 +865,7 @@ Inheritance:
    //member methods;
 
   }
-
    public class Child extends Parent{
-
 
    //it acquires the datamembers and members from parent
 
@@ -521,379 +875,172 @@ Inheritance:
 
    Child c = new Child();
 
-   //using child object we can call parent class datamemebrs and members.
+   //using child object we can call parent class datamemebrs and member methods.
 
-  //using child object we can call it own data memeber and member methods.
+  //using child object we can call it own data memebers and member methods.
 
  }
 
+  Different types of inheritance:
+  ================================
 
- Operators:
- =========
+  1)single inheritance
+  2)multiple inheritance
+  3)multi-level inheritance
+  4) Hierarchical Inheritance
 
- 1)Arithmatic operators:
- ===================
- this operators are used to perfrom calculations between two operands.
-
- +   -- ADDITION
- -     --SUBSTRACTION
- *   --MULTIPLICATION
- /    --DIVISION     --- IT WILL RETRUN QUOTIENT
-
- %    -- MODULES  ---IT WILL RETURN REMAINDER
-
-
- 2)Relational operators:
- ==================
-
-  >    GREATER THAN
-  >=    GREATER THAN OR EQUALS TO
-  <     LESSTHAN
-  <=     LESSTHAN OR EQUALS TO
-  !=     NOT EQUALS TO
-  ==    EQUALS TO 
-
- 3)Logical operators:
- ================
-  &&  --- logical and
-  ||      --logical or
-  ^      --logical XOR
-  !     --- logical Not
-
-4)Increment and Decrement operators
-  
-   ++,--,+=,-=,%=
-
- Example:
- =======
-
- 1)WAP  to perform addition,substraction,division,modules.
-  and display sum of numbers,sub of numbers or.......
-
-
-
-
-
-  Conditional operator:
-  =================
-  this operator is used to make Conditional Expressions.
-
-  syntax:
-  ======
-  Datatype variableName =Expression1?Expression2:Expression3;
-
-   if Expression1 condition is matched it will return expression2
-.
-   if Expression 1 condition is not matched it will retrun Express3
-
-
-
-  Ex:
-  ===
-
-  int a=10;
-  int b=20;
-
-  int value1=(a<b)?a:b;
-
-  int value2=(a>b)?a:b;
-
-
-
-
-
- Conditional Statements:
- ======================
-  1)if
-  ===
-
-  syntax:
-  =======
-  if(condition){
-  
-  //true statments;
-  }
-
-  note:
-  =====
-  In if condition it contains only one statement braces
-  are optional but this statment should not be initilization statement.
-
-
-
-  Example:
-  =======
-  1)WAp to compare two int variables and print which is greater.
-   using if-else condition.
-
-
-  if-else
-  ======
-    syntax:
-    ======
-    if(condition){
-   
-      //true statments   
-    
-    }else{
  
-      //else /false statements
-     }
 
+   1) single inheritance:
+   ======================
 
-
-
-
-  if-else-if:
-  ===========
-  to check multiple conditions
-
-  syntax:
-  ======
-
-  if(condition1){
-
-  //statements
-  
-   }else if(condition2){
-   //statements
- 
-   }else{
-       //statements
-   }
-
-  ex:
-   ===
-    WAp to compare three int variables and print which is greater.
-    using if-else-if condition and logical operators (&& or ||).
-
-
-
-  switch-case:
-  ===========
-   to check multiple condition based on expression
-
-    syntax:
-    =======
-    switch(expresssion){
-
-       case  cond1 : statements;
-                       break;
-       case  cond2 : statements;
-                        break;
-        case cond3 : statements;
-                       break;
-        case cond4 : statements;
-                       break; 
-        default : statement;
-    }
-
-    Example 
-    ++++++++
-    wAp to perform arthematic operations using switch case expresssion .
-    
-
-
-   Iterative statments:  Loops
-   =====================+++++===
-
-   Loops are used to repeat a block of code.
-   
-   Example:
-   -------
-    If you want to show a message 10 times, then rather than typing
-    the same code or message 10 times , you can use a loop.
-
-    In Java, there are three types of loops.
-
-    >while loop
-    >do...while loop
-    >for loop
-
-
-   While loop:
-   ===========
-    while loop is used to run a specific code until a certain condition is met.
-
-   to repeat the statements until the condition become true.
-
-   syntax:
-   =======
-
-   initialize a variable;
-
-    while(condition)
-    {
-    //statements;
-
-    //increment/decrement
-
-    }
+   it contain single parent and single child.
 
    ex:
-   ==
-   Write a  java program to display Numbers from 1 to 10
-   Write a java pgroam to sum of 10 Numbers only.
-   write a program to display multiplication table of 2 using while loop;
+   ----
+
+   public class A{
+    //variables and methods
+   }
 
 
+  public class B extends A{
+    //variables and methods
+   psvm(){
 
-
-
-  sol:
-  ===
-
-   public class ExampleOnWhile{
-
-   public static void main(String args[]){
-
-   int i=1;
-    int n=2;
-
-   while(i<=10){
-
-   System.out.println(n+ " X " +i+" = "+(n*i));
-   i++;    //i=i+1; or //i+=1
-
-   }}
-  }
-
- 2) WAP to print 1 to 10 integers using while loop.
-
-   sol:
-  ===
-
-   public class ExampleOnIntegers{
-
-   public static void main(String args[]){
-
-   int i=1;
-
-   while(i<=10){
-
-   System.out.println(i);
-  i++
-  }
-
- }
- }
-
- for loop
- ========
-
- syntax:
- =======
-
-  for(initilization;condition;increment/decrement){
-
-  //statements
-
-  }
-
-  ex:
-  ===
- Write a  java program to display Numbers from 1 to 10
- Write a java pgroam to sum of 10 Numbers only
-
-  Assign: WAP to display multiplication table of 5 using for loop;
-
- sol:
- ====
- public class ExampleOnFor{
- public static void main(String args[]){
-
- int n=5;
-
- for(int i=1;i<=10;i++){
-
- System.out.println(n+" X "+i+" = "+(n*i));
-
- }
   }
  }
 
 
-  do-while loop
-  =============
-   do..while loop is similar to while loop.
-   However, the body of do..while loop is executed once before the condition is checked .
+2) multi-level inheritance class:
+==================================
+
+  A class extend from more than one class and one child
+
+ ex:
+ ===
+
+ there are three class A,B,C
 
 
-  syntax:
-   =======
-	initilization variable;
-   do{
+  public class A{
 
-   //statements;
-   //increment/decrement
+    //variables and methods
+ }
 
-    }while(condition);
+  public class B extends A{
 
-  note:
-  =====
-  the statements will execute atleast one time before checking the condition.
+     //variables and methods
+ }
 
-
-
- Example:
- =======
-   Write a  java program to display Numbers from 1 to 10
-   Write a java program to sum of 10 Numbers only
-  Assign: write a java program to print 1 to 10 integers using do-while loop.
-  WAP to print multiplication table of 4
-
-
+  public class c extends B{
  
+          //variables and methods
+   public static void main(String args[]){
+
+ //to create the object for c class
+
+  }
+ }
+
+   Example On single inheritance:
+   ========================
+  single inheritance
+
+  a) parent class :-
+   1)create a class named  as First .
+
+   2) this class contain two intansce variables of type int
+
+    3) declare a  method named as getSum(int,int) and retrun type int
+    and access modifier is public
+
+   b) child class:-
+   1)create  a class named as Second which extends from First.
+
+   2) this class contain two instance variables of type float.
+
+   3)declare a method as getMessage(String) and Return type is 
+   String and access modifier is public
+
+   4) create object for  second class and display the
+   First class instance variables and second class
+   instance variables and call the methods of First and second class.
 
 sol:
-   ===
-  public class ExampleOndoWhile{
+===
 
-  public static void main(String args[]){
+public class First{
 
-     int i=1;
-   do{
-        System.out.println(i);
-     i++;
-    }while(i<=10);
-  }
+  int num1=10;
+ int num2=20;
+
+   public int getSum(int x,int y){
+
+   int z = x+y;
+   return z;
+
+   }
+
+}
+
+public class Second extends First{
+
+            float  f1=10.0;
+            float f2=20.0;
+
+  public String getMessage(String s){
  
-
-Assigment:
-==========
- 1)WAP to check given number is prime number or not.
- 2)WAP to check given year is a leap year or not
- 3)WAP to fibnoic series from 1 to 10
-
- 
- for -foreach loop ---from jdk 1.5 
- ===================================
-
- In JDK 1.5 introduced a new for loop known as 
- foreach loop or enhanced for loop, 
- which enables you to traverse the complete array or collection object sequentially 
- without using an index variable.
-
-  syntax:
-  ========
-  for(type of array/collection variableName : Object of array/collection){
-
- //statements;
-
-  }
-
+    return "hello "+s+"welcome to java";
    
-  break :
-  ========
-  The break statement in java terminated the loop immediately and
-  the control of the progrem moves to the next statement.
+ }
+    
+public static void main(String args[]){
+
+     Second s = new Second();
+
+   System.out.println(s.num1);
+   System.out.println(s.num2);
+    
+   int res = s.getSum(40,40);
+   System.out.println("sum of salaries of two numbers is : "+res);
+
+     System.out.println(s.f1);
+     System.out.println(s.f2);
+      
+     String gt = s.getMessage("sainath");
+     System.out.println(gt);       
+           
+}
+}
 
 
-  continue:
-  =========
-  The continue statements skips the current iteration of a loop.
+2) multi-level inheritance
+----------------------------
+Example-level inheritance
+====================
+a) create a class named as A and it contains one method 
+   method name is methodOne()(simple statement(sop) 
+   and retrun type is void .
 
-  After the continue the statement, the program moves to the end of the loop.
+b)create a Class named B and it contains one method named as
+   methodTwo()--(sop) and return type is void.
+
+c) create a class named C and it contains one method named as
+    methodThree() --(sop) and return type is void
+d)create a object for child class  C and call the methods
+  of A,B,C
+
+
+
+  Has A Relation:
+  ================
+  Has a relation is also called as aggregation
+  i.e, a class  will act as user defind datatype  in another class 
+
+
+  
+
 
 
  Abstraction:
@@ -1534,6 +1681,3769 @@ Serializbale --java.io packages
 
   2)If method signature not available in super class  and the same method signature 
    savailable in child class ,it will not execute child class method it will throw an error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->parent class --  public
+
+		     ovveride
+
+-->child class --- protected  
+
+
+but jdk 1.5 we can change the access modifier as well as return type
+also in child class
+
+access modifieres :- default,protected,public
+------------------
+
+                   methods 
+ 
+parent classs ---  public    --protected     default
+
+chlid class   ---  public   ---public        protected/public
+
+
+
+
+returntype:
+============
+
+we can change the return type of a method while overriding
+but the changed return type should not be primitive datatype
+this concept is called as co-variant return type.
+
+in co-variant return it should be a object Reference.
+
+hierarchy:
+===========
+		return
+parent class    Object                Exception
+
+child class     String/StringBuffer    ClassNotFoudation/FileNotFoundException
+
+
+
+ex:
+===
+
+public class ExonCovtype{
+
+
+public Object methodOne(){
+
+System.out.println("we are in method oNe of String return type");
+
+return null;
+
+}
+
+}
+
+
+public class TestExcv extends ExonCovtype
+{
+
+public String methodOne(){
+
+
+System.out.println("we are in method oNe of String return type");
+
+
+return null;
+
+}
+
+  
+public static void main(String args[]){
+
+
+TestExcv  crt = new TestExcv();
+
+Object o = crt.methodOne();
+
+
+
+}
+
+
+}
+
+
+  Access Modifiers:
+  ==================
+  AccessModifiers are used to control(visiable or scope) the access of a class,
+  interface ,variable in package.
+
+   Access Modifiers are
+   ---------------------
+
+    1)Default -- 
+     Default access modifier we can  access with in the same package
+
+   2)private --private access modifier we access with in the class
+
+
+   3)protected -- the scope of protected variable and  methods 
+                  we can access with  same package and
+                   we can access outside the package but 
+                   it should be a child class.
+                
+
+   4)public ---  
+    public accesss modifier is a universal access modifier
+
+
+   Package:
+   ========
+
+   A package is a mechanism to group related classes and interfaces
+   as a single module .
+
+   note:
+   ======
+   package statement should be the firstin java class.
+
+    
+   syntax:
+   =======
+   package packagename;
+   package  packagename.subpackagename;
+
+   ex:
+   ===
+
+   package com.cg;
+
+   public class Ex3{
+
+
+  }
+
+ Some of the predefined package available in java:
+ =======================================
+
+ 1) java.lang.*;    * - indicates all classes  and interfaces from the packages.
+ 2)java.util.* ;  --collections --- in jdk-->jre-->lib->rt.jar -
+ 3)java.sql.*;  -JDBC           --- oracle -- ojdbc.jar 
+ 4)java.io.*;  -- FILE I/0 Streams --in jdk-->jre-->lib->rt.jar 
+ 5)javax.servlet.http.*;-- Servlets --tomcat -- tomcat/lib/servlet-api.jar
+ 6)java.servlet.*;      - --Servlets tomcat -- tomcat/lib/servlet-api.jar
+  
+  we can use packages in your class using import statement
+  ex:
+  ===
+  import java.util.*;
+
+   
+
+
+
+Assignements:
+============
+1) FactoryMethod in java
+2)NumberFormatClass in java 
+3)clone method in java -10
+4)Search and Execute programs Based on 
+    a)Interface - and implementation --3 programs --
+    b) MethodOverriding -- 3 program 
+                i)if access modifier is changed when override a  method.
+               ii)if return  type is changed when override a method.
+               iii)covariant-return type when override a method
+
+5)this  key word and Construtor
+
+
+
+
+  Constructor:
+  ============
+  A constructor is used to initialize the object.
+  
+  A constructor is special method whose name is same as
+   classname.
+
+  A constructor doesnt not return any value not even void also.
+  
+  note:
+  =====
+   Initialize the object means ,allocating memory for 
+   instance variables (heap)  and the instance variables
+   will store with it default values based on it types.
+
+  There are two types of Constructors 
+
+   1) default constructor:
+   =======================
+    a constructor is defined with out parameters with in class    
+
+   2) parameterized constructor:
+     ===========================
+      A constructor is defined with some parameters  with in class.
+
+   note:
+   =====
+   1)if class doesnt not contain any constructor,
+     compiler is responsible to provide default constructor in the 
+     class  implicitly.
+
+   2)compiler will provider default constructor,
+   inside default constructor the code available like this
+    
+   ex:
+   ===
+    compiled  welcome.class
+    public class Welcome{
+
+       public Welcome(){
+
+            this()/super() 
+         }
+
+  }
+    
+  3) If explicity we need to use this() or super() 
+    inside a constructor,it should be first line statment inside
+    the constructor.
+
+   ex:
+   ----
+   
+   compiled class
+
+   public class Welcome{
+
+      public Welcome(){
+
+            this()/super() --it should be the first  statement
+           //other statements
+         }
+
+   }
+
+   
+   example:
+   ---------
+   
+    1)create a class named as TestOnConstructor 
+    and create default and 
+     parameterized(int empno,String ename,float sal) constructors
+
+    2)create three instance variables of type empno -int
+       ename -String,sal -- float
+
+    3)create the object for TestOnConstructor class and display
+     empno,ename,sal fields.
+
+
+  note:
+   ----
+    1)output should be for default constructor --default values
+    2)output for parameterized constructor --user passed values 
+    3)differentiate between instances variables and local variables
+      using this keyword in constructors
+
+       
+   this keyword:
+   =============
+   1) this is keyword which represents current class object or instance
+   
+   2) using this keyword we can call instance methods and 
+     instance variable with in a class.
+   3) using this() method we can call constructors.
+   4) by using this keyword we can differentiate local variables and instance varibles(class level variables)
+    note:- this should be a first line of statement in constructor
+   
+  example:
+  --------
+
+  public class ExampleOnThis{
+     
+      int a=10;
+      String s = "hello";
+ 
+
+       public ExampleOnThis(){
+
+      System.out.println("we are in default constructor");
+      System.out.println(a+ "  "+s);
+ 
+      }
+   
+     public ExampleOnThis(int x,String s){
+
+      System.out.println("we are in parameterized constructor");
+      }
+
+      public static void main(String args[]){}
+
+      ExampleOnThis eot = new ExampleOnThis();
+
+      }
+
+
+
+   final keyword:
+   ==============
+
+   we can use final keyword in three ways
+
+   1)We can a declare a final variable ,along with 
+   declaration we must initilaze that final variable
+   
+   2)final variable will act as constant i.e, value of final 
+   variable cannot be changed(fixed)
+
+   3)we can declare a method as final by using final keyword
+    note:-final method will not particpate in method overriding.
+
+  4)we can declare a class as final and we can create the object for final class but 
+   final class will not particate in inheritance.
+ 
+
+
+
+
+
+
+
+
+
+ super keyword:
+ ==============
+ ->super keyword is used to refer parent class object.
+
+ ->using super we can call super class variables and 
+   super class methods ==>parents class
+
+ ->using super() method we can call super class constructors.
+  because in inheritance sub class cannot override the constructors.
+
+
+ to call a super class method:
+ ======================
+ super.methodname(); --we need to call in any instance methods of sub class
+
+ to call super class instance variable:
+ =============================
+ super.variableName  --we need to call in any instance variable of sub class
+
+ to callsuper class constructor:
+ ========================
+
+ super() ---it will call default constructor of super class by
+                  default without specifying.
+
+ super(any arguments) -- it will call parameterized constructor of super class
+                                              based on arguments type
+
+ note:
+ ====
+ 1)it will call default constructor of super class by default without specifying
+     in subclass default constructor.
+
+ 2)super() or super(any arguments ) --should be first line of statment 
+   in sub-class constructors.
+
+
+ Example:
+ ========
+
+ public class ExampleOnSuper
+ {
+
+
+ int a=10;
+
+ public  ExampleOnsuper(){
+
+   System.out.println("we are in default constructor of ExampleOnsuper");
+
+ }
+  public void display(){
+
+   System.out.println("we are in display method of ExampleOnsuper");
+
+  } 
+ 
+}
+
+
+ public class Test3 extends ExampleOnSuper{
+
+  int a=20;
+
+ public Test3(){
+
+ System.out.println("we are in default constructor of Test class");
+
+ }
+
+
+ public void display(){
+
+ System.out.println("we are in display method of test class");
+
+ }
+
+
+ public static void main(String args[]){
+
+   
+  Test t = new Test();
+
+  
+ }
+
+}
+
+
+
+
+Has-A relation:
+===============
+
+A class which contain object reference  or entity reference
+as a instance variable is called aggregation or Has-a relation.
+
+Example:
+========
+
+There are two class student,Address and
+Student Has-A relation with Address.
+
+
+1)Address Class
+
+public class Address{
+
+  String city;
+  String  state;
+  String country;
+
+ public Address(){
+
+  this.city=null;
+  this.state=null;
+  this.country=null;  
+
+ }
+
+ public Address(String city,String state,String cn){
+
+  this.city=city;
+  this.state=state;
+  country=cn;
+
+ }
+}
+
+
+public class Student{
+
+  int sid;
+  String sname;
+  Address a; //represents student has-a relation with address
+
+  public Student(){
+   this.sid=0;
+   this.sname=null;
+   this.a=null;
+
+  }
+  
+  public Student(int sid,String sname,Address a){
+
+    this.sid=sid;
+    this.sname=sname;
+    this.a=a;
+
+  }
+
+
+   public static void main(String... args){ //var-arg--jdk1.5
+
+     Address a1 = new Address("hyd","telangana","india");
+     
+     Student s= new Student(1001,"Martin",a1);   
+
+     System.out.println("Student Details");
+     
+     System.out.println("Sid is :"+s.sid);
+     System.out.println("Stundent name is :"+s.sname);
+
+     System.out.println("city :"+s.a.city);
+     System.out.println("state "+s.a.state);
+     System.out.println("country :"+s.a.country);
+  
+  }
+
+
+}
+
+ Operators:
+ =========
+
+ 1)Arithmatic operators:
+ ===================
+ this operators are used to perfrom calculations between two operands.
+
+ +   -- ADDITION
+ -     --SUBSTRACTION
+ *   --MULTIPLICATION
+ /    --DIVISION     --- IT WILL RETRUN QUOTIENT
+
+ %    -- MODULES  ---IT WILL RETURN REMAINDER
+
+
+ 2)Relational operators:
+ ==================
+
+  >    GREATER THAN
+  >=    GREATER THAN OR EQUALS TO
+  <     LESSTHAN
+  <=     LESSTHAN OR EQUALS TO
+  !=     NOT EQUALS TO
+  ==    EQUALS TO 
+
+ 3)Logical operators:
+ ================
+  &&  --- logical and
+  ||      --logical or
+  ^      --logical XOR
+  !     --- logical Not
+
+4)Increment and Decrement operators
+  
+   ++,--,+=,-=,%=
+
+ Example:
+ =======
+
+ 1)WAP  to perform addition,substraction,division,modules.
+  and display sum of numbers,sub of numbers or.......
+
+
+
+
+
+  Conditional operator:
+  =================
+  this operator is used to make Conditional Expressions.
+
+  syntax:
+  ======
+  Datatype variableName =Expression1?Expression2:Expression3;
+
+   if Expression1 condition is matched it will return expression2
+.
+   if Expression 1 condition is not matched it will retrun Express3
+
+
+
+  Ex:
+  ===
+
+  int a=10;
+  int b=20;
+
+  int value1=(a<b)?a:b;
+
+  int value2=(a>b)?a:b;
+
+
+
+
+
+ Conditional Statements:
+ ======================
+  1)if
+  ===
+
+  syntax:
+  =======
+  if(condition){
+  
+  //true statments;
+  }
+
+  note:
+  =====
+  In if condition it contains only one statement braces
+  are optional but this statment should not be initilization statement.
+
+
+
+  Example:
+  =======
+  1)WAp to compare two int variables and print which is greater.
+   using if-else condition.
+
+
+  if-else
+  ======
+    syntax:
+    ======
+    if(condition){
+   
+      //true statments   
+    
+    }else{
+ 
+      //else /false statements
+     }
+
+
+
+
+
+  if-else-if:
+  ===========
+  to check multiple conditions
+
+  syntax:
+  ======
+
+  if(condition1){
+
+  //statements
+  
+   }else if(condition2){
+   //statements
+ 
+   }else{
+       //statements
+   }
+
+  ex:
+   ===
+    WAp to compare three int variables and print which is greater.
+    using if-else-if condition and logical operators (&& or ||).
+
+
+
+  switch-case:
+  ===========
+   to check multiple condition based on expression
+
+    syntax:
+    =======
+    switch(expresssion){
+
+       case  cond1 : statements;
+                       break;
+       case  cond2 : statements;
+                        break;
+        case cond3 : statements;
+                       break;
+        case cond4 : statements;
+                       break; 
+        default : statement;
+    }
+
+    Example 
+    ++++++++
+    wAp to perform arthematic operations using switch case expresssion .
+    
+
+
+   Iterative statments:  Loops
+   =====================+++++===
+
+   Loops are used to repeat a block of code.
+   
+   Example:
+   -------
+    If you want to show a message 10 times, then rather than typing
+    the same code or message 10 times , you can use a loop.
+
+    In Java, there are three types of loops.
+
+    >while loop
+    >do...while loop
+    >for loop
+
+
+   While loop:
+   ===========
+    while loop is used to run a specific code until a certain condition is met.
+
+   to repeat the statements until the condition become true.
+
+   syntax:
+   =======
+
+   initialize a variable;
+
+    while(condition)
+    {
+    //statements;
+
+    //increment/decrement
+
+    }
+
+   ex:
+   ==
+   Write a  java program to display Numbers from 1 to 10
+   Write a java pgroam to sum of 10 Numbers only.
+   write a program to display multiplication table of 2 using while loop;
+
+
+
+
+
+  sol:
+  ===
+
+   public class ExampleOnWhile{
+
+   public static void main(String args[]){
+
+   int i=1;
+    int n=2;
+
+   while(i<=10){
+
+   System.out.println(n+ " X " +i+" = "+(n*i));
+   i++;    //i=i+1; or //i+=1
+
+   }}
+  }
+
+ 2) WAP to print 1 to 10 integers using while loop.
+
+   sol:
+  ===
+
+   public class ExampleOnIntegers{
+
+   public static void main(String args[]){
+
+   int i=1;
+
+   while(i<=10){
+
+   System.out.println(i);
+  i++
+  }
+
+ }
+ }
+
+ for loop
+ ========
+
+ syntax:
+ =======
+
+  for(initilization;condition;increment/decrement){
+
+  //statements
+
+  }
+
+  ex:
+  ===
+ Write a  java program to display Numbers from 1 to 10
+ Write a java pgroam to sum of 10 Numbers only
+
+  Assign: WAP to display multiplication table of 5 using for loop;
+
+ sol:
+ ====
+ public class ExampleOnFor{
+ public static void main(String args[]){
+
+ int n=5;
+
+ for(int i=1;i<=10;i++){
+
+ System.out.println(n+" X "+i+" = "+(n*i));
+
+ }
+  }
+ }
+
+
+  do-while loop
+  =============
+   do..while loop is similar to while loop.
+   However, the body of do..while loop is executed once before the condition is checked .
+
+
+  syntax:
+   =======
+	initilization variable;
+   do{
+
+   //statements;
+   //increment/decrement
+
+    }while(condition);
+
+  note:
+  =====
+  the statements will execute atleast one time before checking the condition.
+
+
+
+ Example:
+ =======
+   Write a  java program to display Numbers from 1 to 10
+   Write a java program to sum of 10 Numbers only
+  Assign: write a java program to print 1 to 10 integers using do-while loop.
+  WAP to print multiplication table of 4
+
+
+ 
+
+sol:
+   ===
+  public class ExampleOndoWhile{
+
+  public static void main(String args[]){
+
+     int i=1;
+   do{
+        System.out.println(i);
+     i++;
+    }while(i<=10);
+  }
+ 
+
+Assigment:
+==========
+ 1)WAP to check given number is prime number or not.
+ 2)WAP to check given year is a leap year or not
+ 3)WAP to fibnoic series from 1 to 10
+
+ 
+ for -foreach loop ---from jdk 1.5 
+ ===================================
+
+ In JDK 1.5 introduced a new for loop known as 
+ foreach loop or enhanced for loop, 
+ which enables you to traverse the complete array or collection object sequentially 
+ without using an index variable.
+
+  syntax:
+  ========
+  for(type of array/collection variableName : Object of array/collection){
+
+ //statements;
+
+  }
+
+   
+  break :
+  ========
+  The break statement in java terminated the loop immediately and
+  the control of the progrem moves to the next statement.
+
+
+  continue:
+  =========
+  The continue statements skips the current iteration of a loop.
+
+  After the continue the statement, the program moves to the end of the loop.
+
+
+
+
+
+
+
+ switch statement:
+ ==============
+ switch statement is  alternative of if-else-if to check multiple condition 
+
+ syntax:
+ ======
+
+ switch(expression){
+
+ case value1: //code to executed;
+                         break;
+
+ case value2 ://code to executed;
+                     break:
+   ---
+
+ default  : //code to executed;
+ }
+
+
+ Example:
+ ========
+
+  WAP to perfrom  Arithmetic operations (add,substract,mu...)
+  based  on switch case statements.
+
+  sol:
+  ===
+  public class ExampleOnSwitch{
+
+  public static void main(String args[]){
+
+  int a=10;
+  int b=5;
+
+  int exp=1;
+
+  switch(exp){
+
+  case 1: int z=a+b;
+             System.out.println("sum of two numbers is "+z);
+             break;
+
+  case 2 :int s=a-b;
+             System.out.println("substraction of two number is "+s);
+             break;
+
+  default :  System.out.println("Invalid operation");
+
+ }
+ }
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ How to read the values from Keyboard using Scanner class(java.util.*)
+ =====================================================================
+
+ 1) we need to create the object for scanner class
+    ex:
+    ===
+    Scanner s = new Scanner(System.in);  //Specify the class information to compiler by using import keyword
+
+ 2) to read the values for respective variable data types 
+   we need to use respective methods from Scanner class by using scanner Object
+
+   ex:
+   ===
+   int a = s.nextInt();
+   float b = s.nextFloat();
+   long l = s.nextLong();
+
+   String  s = s.next();    ex:john
+                                   ex:-    john doe  -- it will read only  john
+    String  s =s.nextLine(); 
+
+
+   Example:
+   =======
+   Write a java program to read  studentId,studentName,marks,comments from
+   keyboard or run time by using scanner class
+
+
+
+
+
+
+
+sol:
+===
+
+  import java.util.Scanner;
+
+  public class ExampleOnScanner{
+
+  public static void  main(String args[]){
+
+   Scanner  s = new Scanner(System.in);
+
+   System.out.println("Enter the value for Student Id : ");
+  int studentId = s.nextInt();
+
+  System.out.println("Enter the value for Student Name " );
+  String studentName = s.next();
+  
+  System.out.println("Enter the value for StudentMarks");
+  float studentMarks=s.nextFloat();
+
+  System.out.println("Student Details are :");
+  System.out.println("stundentId is : "+studentId);
+  System.out.println("studentName is :  "+studentIName );
+  System.out.println("studentMarks is :  "+studentMarks );
+             
+}
+}
+
+
+ Example:
+ =======
+     WAP  to perform Arthimetic opertions
+          when user   Enter   1.add the two numbers
+                                2.substraction of two numbers
+                                3.multiplication
+                                4.division
+                                5.modules  
+                                 6.Exit         --  using scanner,switch,do-whileloop.
+
+
+
+
+
+
+  Access Modifiers:
+  ==================
+  AccessModifiers are used to control(visiable or scope) the access of a class,
+  interface ,variable in package.
+
+   Access Modifiers are
+   ---------------------
+
+   1)Default -- 
+     Default access modifier we can  access with  in the class and outside the class 
+     with in the same package
+
+   2)private --private access modifier we access with in the class
+
+   3)protected -- the scope of protected variable and  methods 
+                  we can access with  same package and
+                   we can access outside the package but 
+                   it should be a child class.            
+   4)public ---  
+    public accesss modifier is a universal access modifier
+
+
+   Package:
+   ========
+   A package is a mechanism to group related classes and interfaces
+   as a single module .
+
+   note:
+   ======
+   package statement should be the firstin java class.
+
+   syntax:
+   =======
+   package packagename;
+   package  packagename.subpackagename;
+
+   ex:
+   ===
+
+   package com.cg;
+
+   public class Ex3{
+
+
+  }
+
+ Some of the predefined package available in java:
+ =======================================
+
+ 1) java.lang.*;    * - indicates all classes  and interfaces from the packages.
+ 2)java.util.* ;  --collections --- in jdk-->jre-->lib->rt.jar -
+ 3)java.sql.*;  -JDBC           --- oracle -- ojdbc.jar 
+ 4)java.io.*;  -- FILE I/0 Streams --in jdk-->jre-->lib->rt.jar 
+ 5)javax.servlet.http.*;-- Servlets --tomcat -- tomcat/lib/servlet-api.jar
+ 6)java.servlet.*;      - --Servlets tomcat -- tomcat/lib/servlet-api.jar
+  
+  we can use packages in your class using import statement
+  ex:
+  ===
+  import java.util.*;
+
+
+
+  Arrays:
+  =======
+  A array is used to store collection of similar types of element.
+
+  An array is used to store homogenous types of elements.
+
+  Array index start from 0
+
+  to Declare a single dimension Array:
+  ==============================
+   syntax:
+   =======
+  dataType  arrayName[]
+  Ex:
+  ====
+  int a[];
+
+  int[] a;
+
+  int []a;
+ 
+  to Declare and initilaize the size for array  using new key word
+  -----------------------------------------------------------------===============
+  syntax:
+  =======
+
+  dataype arrayName[] = new datatype[size];
+
+   ex:
+   ---
+
+    int a[] = new int[5];
+
+  Example:
+  ========
+
+  WAP to create int array with declaration along  with initialization
+
+  sol:
+ ====
+  public class ExampleOnArray{
+ 
+   public static void main(String args[]){
+  
+    //declare and initializtion of array;
+
+      int a[] = {10,20,30,40,50};
+
+     System.out.println(a);
+   
+     System.out.println(a.length);//no of elements in array is  5
+
+    //using for loop
+      
+     for(int i=0;i<a.length;i++){
+
+         System.out.println(a[i]);
+
+      } 
+    //for each loop
+   
+      for(int b : a){ //here we are storing array object  a  into b
+
+      System.out.println("displaying the elements using for each loop "+b);    
+
+      }
+   }
+
+}
+
+Example:
+=======
+ 1)Create an int array and with size of five elements 
+  and initiliaze the array and display the elements from array
+
+ sol:
+ -----
+  public class ExampleOnArray2{
+
+  public static void main(String args[]){
+ 
+  int a[] = new int[5];  //declared the array with size using new operator 
+  //initilaze the array 
+  a[0]=10;
+  a[1]=40;
+  a[2]=50;
+  a[3]=60;
+  a[4]=30;
+
+  System.out.println("size of any arrray "+a.length);
+  //to display the elements using for loop
+
+   for(int i=0;i<a.length;i++){
+   System.out.print(a[i]+" ");
+   }
+
+  //display the elements using for-each loop
+   for(int b : a){
+
+   System.out.println(b);
+
+  }
+  }
+
+
+ Example:
+ =======
+
+ 1) WAP to create  an  int array which stores five elements and
+   read the values using scanner  and initialize the array.
+   and display the elements from array using for and for-each loop
+
+
+ public class ExampleOnArray3{
+
+ public static void main (String args[]){
+  
+    int c[] = new int[5];
+
+   //initialize the array using for loop using keyboard  
+   Scanner s= new Scanner(System.in);
+          
+   for(int i=0;i<c.length;i++){
+
+     System.out.println("enter the value for C array");
+    c[i]=s.nextInt();
+
+   }
+     //to display the values from array c
+
+        for(int i=0;i<c.length;i++){
+	    System.out.println(c[i]);
+
+	   }
+
+   //foreach-loop
+	for(int i :c){
+  	 	System.out.print(i+" ");
+  	}
+  
+    }}
+
+
+
+  two dimension array:
+ =======================
+
+ syntax:
+ ========
+
+ datatype arrayName[][] = new datatype[size][size];
+			              rows  cols	
+ ex:
+ ===
+
+ 1) create an two dimension array of type int along with 
+   declaration and initialzation .
+
+ sol:
+ =====
+
+ public class ExampleOnArray5{
+
+     public static void main(String args[]){
+
+       int a[][]={{1,2,3},{10,30,50}};  //        1    2    3
+                                           //     10  30  50     2 rows and  3 cols
+                                            //no of elements in array is  rows*cols
+     for(int i=0;i<2;i++){ //rows
+    
+         for(int j=0;j<3;j++){ //colums
+
+       System.out.print(a[i][j]+" ");
+     }
+       System.out.println("");
+    }
+ }
+ }
+
+olp:-
+1  2  3
+10 30 50
+
+
+Example:
+========
+ WAP program to declare two dimension array of type int 
+ with size(r=3,c=3) and insert the values to array using Scanner
+ and display the element using for loop
+
+sol:
+===
+  public class ExampleOnArray6 {
+
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+		
+	  int a[][] =new int[3][3];
+		
+	  //insert the values for array a[r][c]
+	  
+	  for(int i=0;i<3;i++) {
+		  for(int j=0;j<3;j++) {
+			  
+             System.out.println("Enter the elements for a[][]");
+			a[i][j]=s.nextInt();  
+		  }		  
+	  }	  
+	//     display the element using for loop
+		System.out.println("Elements are :");
+	  for(int i=0;i<3;i++){ //rows
+		  for(int j=0;j<3;j++){ //columns   
+  	       System.out.print(a[i][j]+" ");  
+	     }
+	       System.out.println("");
+	    }		
+	}
+   }
+
+ Example:
+ ========
+
+ WAP a pragrom to pass an int array as method argument and
+ display the elements from array 
+  sol:
+  ====
+
+ public class ExampleonArray7{
+
+  public void getEmpSal(int a[]) {
+		 
+		 //display the element from array a using for-each loop
+		 for(int b:a) {
+			 System.out.print(b);
+		 }		 
+	 }	
+	public static void main(String[] args) {
+		
+	ExampleOnArray4  eoa = new ExampleOnArray4();	
+	//declaring and initilazing int empSal[]
+	
+	int empSal[] = {3000,4000,5000,2000};
+	 
+	 eoa.getEmpSal(empSal);	
+				
+	}
+ }
+
+
+Example:
+========
+
+WAP to return an int array as method return type
+and display the elements from array.
+
+sol:
+=====
+ public class ExampleOnArray9{
+
+   public int[]  methodOne(){
+
+    int a[]={10,30,40,50};
+  
+    return a;
+
+   }
+   public static void main(String args[]){
+ 
+     ExampleOnArray9 a9 = new ExampleOnArray9();
+
+      int res[] = a9.methodOne();
+
+    for(int b:res){
+
+       System.out.println(b);
+
+     }
+   }
+
+
+ String:  //java.lang.String
+ =======
+ String a predefined class available in java.lang.String
+
+ String a final class
+
+ String is a immutable class.
+
+ immutable :-- the data or state of String object cannot be changed.
+
+
+ Difference between (==) operator and equals() method 
+ =========================================
+
+ 1) == operator check for the object References
+
+ 2)equals() method check  for the content inside the Object Reference.
+
+ note:
+ ====
+  1)String literal object will store in String constant
+   pool memory area  of heap 
+    Ex:-  String ename= "Raju"  //literal --- it an string object
+
+    Note:- The compiler first checks the string pool to see if the string already exists.
+           if the string already exists, the new memory is not created. Instead the same reference 
+           points to the already existed string.
+         
+           if not already exists , the new memory for string is created
+
+
+ 
+  2) String Object with new key Word ,the object will
+  store on the heap of jvm
+
+     Ex:- String ename = new String("Raju");
+
+
+
+
+
+
+ String Buffer 
+ ============
+
+ String buffer is a class availabe in java.lang.
+
+ Stringbuffer is a mutuable class
+
+ String buffer is threadSafe class(in side this class all methods are synchronized)
+
+
+  Difference Between  StringBuffer and StringBuilder.
+
+
+
+
+
+  Diffference Between  Interface and abstractClass
+  Difference Between   this and super keyword
+  what is meant by GarbageCollector?
+       a)System.gc();
+       b)finalize() ---methods
+
+  JVM Architecture in that what is the use of Interpreter and Jit Compiler
+  Example Based On MethodOverriding 
+   a) when override a method from parent to child whether can we change
+     AccessModifier and return type is it possible?
+ 
+   
+
+     
+
+
+
+
+
+
+
+
+
+
+ Exception Handling:
+ ===================
+ 
+ ->An unexpected  or unwanted event which disturbs (abnormal  execution)
+   the  normal flow of execution of program is called exception.
+  
+ -> exception handling is a process of converting
+    abnormal execution of a program  into normal execution.
+
+ -> Exception is a run time error
+
+  
+  ex:
+  ------
+   event :-- invalid input or filedoesnot exist or object reference holding null values,
+              or input mismatch..etc
+
+  There are two types of Exceptions:
+  ===================================
+
+   checked Exception -the exception occured at compile time
+
+   un-checked Exception -the exception occured at run time
+
+          
+   Difference Between Exception and Error:
+   ------------------------------------------------------------
+
+   Exception :-- these exceptions caused by our program and 
+                    these are recoverable
+  
+   Error :--   Error is  not caused by our program code and these
+               error caused due to lack of system resources
+               and these errors are not recoverable.
+
+
+
+    
+  Hierarchy of Exception:
+  ==================
+
+                           Object
+      
+                              |
+                          Throwable
+
+                              |
+               ____________________________________ 
+              |				     |
+            Exception			    Error 
+                 |
+      _______________________________
+      | 		            |  
+  checkedException            uncheckedException
+    |-IOException	                |- RunTimeException
+    |-SQLException   		        |- ArrayIndexOutOfBoundException
+    |-InterruptedException		|- AritheMaticExcpetion
+       ....				......
+   
+  
+    There are two types of Exception
+    1) Built-in or pre-defined Exceptions
+    2) User Defined Exceptions or custom Exception  
+
+
+  
+
+  Example:
+  ========
+   
+   public class Calculation{
+
+   public static void main(String args[] ){
+
+    
+    System.out.print("statement 1");
+     
+    int a=10/0;
+
+    System.out.println("statement2")
+
+ 
+  }
+ 
+  }
+
+   note:
+  ------
+  1)the code which will raise exception is called error code
+    and we need to place  error code  inside in try block.
+
+  2)ANd we need to handle this raised Exception inside catch block
+    by specfiying Exception ClassName.
+
+   syntax:
+   =======
+
+    try{
+
+     business  code;
+
+    }catch(Exceptionclassname reference){
+
+    // handling Exception;
+
+    }finally{  --optional
+
+      //code to close the connection Objects
+   }
+
+  
+    3)suppose in a method exception is occured 
+      internally jvm raise the Exception based on some information
+     1)Exception contains
+                          a)Name of the Exception
+                          b)Description of the Exception
+                          c)Location of the Exception
+   Ex:
+   === At run time JVM displays this Exception
+
+   Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Calculation.main(Calculation.java:10)
+   sol:
+  -----
+  Name of the Exception : java.lang.ArithmeticException
+  Description of the Exception : / by zero
+  Location of the Exception : main
+   
+
+   4) to handle this exceptions inside catch block
+      we need to call any one  of the method below
+      a) printStackTrace();
+      b)  getMessage(); --it will print  Description of the Exception
+      c) Directly print the exception class reference 
+
+
+
+
+
+Example:
+========
+
+ 1)WAP TO HANDLE  ARITHMETIC EXCEPTION.
+
+ sol:
+ ==
+
+ WAP TO HANDLE  ARITHMETIC EXCEPTION AND NUMBERFORMAT EXCEPTION
+ Read the required values using Scanner
+
+
+
+ ==============================================================
+
+ sol:
+ =====
+
+ public class ExmapleOnException2
+ {
+
+  public static void main(String args){
+ 
+   Scanner s = new Scanner(System.in);
+  
+     try{
+    System.out.println("Enter the value for n : ");
+     int n =Integer.parseInt(s.nextLine());
+           if(10%n==0){
+                
+                System.out.println("10 is divisible by "+ n);
+              
+              }
+
+      }catch(ArithmeticException ae){
+
+           System.out.println(ae.getMessage());
+
+      }catch(NumberFormatException ne){
+
+            System.out.println(ne.getMessage());
+
+       }catch(Exception e){
+
+                e.printStrackTrace();
+        }
+        System.out.println("statement 2");
+ }
+
+ }
+
+
+
+ finally block:
+ ==============
+ 
+ this block is used to write the clean up code
+ i.e,close the connection objects or any file objects to be closed.
+
+ 1)In finally block we can handle exceptions using try and catch block.
+
+ 2)THe finally block   will be executed  whether exception is 
+   occured or not.
+
+
+
+
+ syntax:
+ ========
+
+ try{
+
+ //business logic
+
+ }catch(){
+
+  //handle the exception
+
+ }
+
+ finally{
+   //to clean up code to close the objects
+
+ }   
+   
+
+ case 1:
+ ========
+
+ 
+  try{
+
+  //business code  to get exception
+
+  } --not valid
+  note:
+ ======
+ if we using try block it must contain either a catch block or
+ a finally block
+    
+
+ case 2:
+ ========
+
+
+ try{
+
+ //business code
+ }
+ finally{
+   
+
+ }
+  
+
+
+
+  case 3:
+  ========
+
+  catch{
+
+  //to handle exception
+
+  }finally{
+ 
+  //clean up code
+
+  }--not valid
+
+  note:
+  =======
+  catch doesnot exists with out try block 
+
+
+case4:
+======
+   try{
+
+ //business code
+ }catch(ClassName ae){
+
+  }
+ finally{
+    try{
+   }catch(){
+   
+   }
+ }
+  
+
+
+
+ 
+  Example 3:
+  ===========
+
+  Wap  to handle ArrayOutOfBoundException using try,catch and finally blocks
+
+  sol:
+  =====
+    import java.util.Scanner;
+   
+    public class ExampleOnException3{
+  
+    public static void main(String args[]){
+             
+     Scanner s = new Scanner(System.in);
+       
+       try{
+               
+           int[] a= new int[3];
+           
+          for(int i=0;i<4;i++){
+
+            System.out.println("Enter the values for array a" );
+              
+                a[i]=s.nextInt();
+
+         }
+         catch(ArithmeticException ae){
+
+            System.err.println("A number cannot be divisble by zero");
+
+         }
+          catch(ArrayIndexOutOfBoundsException aie){
+
+          System.err.println("Size of Array Is Exceeded ,Current Array size is 3");
+
+         }catch(Exception e){
+
+            System.out.println(e.getMessage());
+
+         }
+         }
+   }
+  }  
+
+    
+  throws:
+  =======
+
+    throws keyword used to throws the exceptions with out 
+    handling it(try and catch).
+
+   we need  to write throws keyword along with method signature;
+
+   syntax:
+   =======
+
+     methodname(if any parameters) throws ExceptionName,...{
+          ///Exception code
+      }
+
+
+
+ 
+ Example:4
+ ==========
+  
+  Write a java program to throw the InterruptedException using
+  throws keyword
+
+  sol:
+  ===
+  public class ExampleOnThrows{
+
+  public static void main(String args[]){
+
+   System.out.println("statement-1");
+   try{
+   Thread.sleep(2000);  /c
+   }catch(InterruptedException ie){
+
+  ie.printStackTrace();
+  }
+  System.out.println("statement-2");
+
+  }
+ }
+
+
+
+  throw:
+  ======
+
+    By default jvm is responsible to create the object
+    for the Built-in Exception Classes, to create the object.
+    explicity for those Exception classes we need to use throw keyoword
+
+    syntax:
+    =======
+ 
+     throw new ExceptionClassName("user defined message");
+
+    note:
+    =====
+    Mainly throw keyword is used to create the object explicity
+      for userdefined exception classes or custom Exception classes  
+
+
+ 
+  UserDefinedExceptions:
+  ======================
+
+   the exceptions which already exists inside java which will not
+   meet the business requirement  then we need to go for
+    user-defined exception.
+
+   steps to create userdefined Exception class
+   
+  steps
+  ======
+
+   1) create a user defined  class which extends from Exception or from
+        RunTimeExceptionClass  
+
+   2) we need to  create a parameterized constructor 
+       with argument of String type
+
+   3) we need to call super class constructor of Exception
+        inside parameterized constructor of user defined class.
+
+   4)create the object for the user Defined Exception class
+     then throw the exception by using throw keyword.
+
+
+  Example:
+  ---------
+  
+  1) WAP to create UserDefined Exception 
+  2) WAP to  create object for UserDefined Exception class and
+      throw the Exception using throw keyword
+
+   
+  1)UserDefinedClass Named As : MyException
+  ==========================================
+   
+   sol:
+   -----
+    public  class MyException extends Exception
+    {
+
+          public MyException(String s){
+
+                 super(s);
+
+        }
+    }
+     
+    2)sol:
+    =====    
+    public class UserDefinedExceptionDemo {
+
+       public static void main(String args[]){
+   
+       try{
+                int age=17;
+
+              if(age<18){
+                 throw  new MyException("age should be greater than 18 to vote");                
+   
+              }
+       } catch(MyException e){
+
+              System.err.println(e.getMessage()); 
+
+         }   
+      System.out.println("rest of code");        
+      }
+  
+    }
+
+       
+
+
+
+
+
+ Multi-threading:
+ ================
+
+ 1)WAP which extends from Thread class and
+    override a method run() inside the class
+ 
+ 2)create a another class to create a  object for thread class
+    and call run method .
+
+  
+ sol:
+ ====
+
+    public class ExampleOnThread extends Thread{
+
+
+       public void run(){
+ 
+       for(int i=0;i<=5;i++){
+       
+        System.out.println("child thread "+i);
+      }
+
+      }
+
+     }
+
+
+  2) public class ThreadDemo{
+
+        public static void main(String args[]){
+     
+       
+           ExampleOnThread t1 = new ExampleOnThread();
+
+           t1.start();
+         
+           for(int i=0;i<=5;i++){
+		
+		System.out.println("main thread "+i);
+            }
+    }
+      }
+
+ 
+ By implementing Runnable Interface(java.lang)
+ =============================================
+   1 ) WAP which implements Runnable interface and 
+      provide inplementation for run() method.
+
+   2) WAP to create the object for above class and class the run method.
+
+  sol:
+  ====
+     
+     public class ExampleOnRunnable implements Runnable{
+
+         public void run(){
+
+                for(int i=0;i<=5;i++){
+                   
+                    System.out.prinln("child thread "+i);
+
+                 }
+
+      }
+     }
+
+   2) public class ThreadDemo1{
+
+          public static void main(String args){
+
+                
+          ExampleOnRunnable er = new ExampleOnRunnable();
+            
+              Thread t = new Thread(er);
+           
+           t.start();
+
+         for(int i=0;i<=5;i++){
+
+          System.out.println("main thread"+i);
+         }
+
+        }
+        }
+
+
+
+  
+
+
+ Synchronization:
+ ================
+
+  sychronization is a keyword in java
+
+  we can use this synchrozied keyword for methods or block
+  and cannot be a class and variable
+
+  When a method can declare synchrozied then  only a one thread
+  can execute at a time.
+
+  synchrozied keyword internally performs locking.
+
+  the main advantage of synchronization  we can resolve
+  data inconsistency
+
+  the main disadvantage of synchronization is we need to 
+  wait until the thread  complete execution and this lead to
+  decrease performance
+
+
+  note:
+  ------
+  IN Java by default every class has lock,but the lock is applied
+  for the class when  the class it contains synchrozied methods.
+
+  syntax:
+  =======
+ 
+   public  synchronzied returntpe methodname(if any arguments){
+
+     //statments;
+
+   }
+
+  
+ syntax for block:
+ =================
+
+  synchronized(Object){
+
+ }
+       
+
+ Example:
+ ========
+ 
+ 1) create a class named as Display which contain one method of sychronized 
+    named as wish and it contain to display the welcome to java five times
+   along username.
+ 2)create a Thread class which extends from Thread named as ExampleOnSynchronized
+ and call the synchronized method of Display class
+ 
+ 2) create  on more class to create two thread objects
+     and call  above synchronized method.
+
+  
+ 
+
+
+
+
+
+sol:
+ ====
+
+
+  public class ExampleOnSynchronized {
+
+
+        public synchronized void wish(String name){
+
+            for(int i=1;i<=5;i++){
+
+             
+             System.out.println("welcome to java by "+name);
+
+          }
+
+        }
+
+    }
+  
+
+     public class TestOnSyn extends Thread {
+     
+         ExampleOnSynchronized esyn ;
+        String name;
+
+        public TestOnSyn(ExampleOnSynchronized esyn,String name){
+
+         this.esyn=esyn;
+          this.name=name;
+
+        }        
+
+      public void run(){
+
+
+         esyn.wish(name);
+
+            try{
+             Thread.sleep(2000);
+         }catch(Exception e){System.out.println(e.getMessage());}
+
+       }
+
+    }      
+
+  
+
+   public class Test{
+
+     public static void main(String args;){
+
+          ExampleOnSynchronized esyc1 = new ExampleOnSynchronized();
+
+          
+      TestOnSyn t1 = new TestOnSyn(esync1,"Scott");
+
+         t1.start();
+
+     TestOnSyn t2 = new TestOnSyn(esync1,"Vishnu");
+
+      t2.start();
+      }   
+
+      }
+
+  }
+
+
+Self study:
+===========
+
+1)Difference between concurrency and simultaneously and parallel?
+
+2)Example on Synchronized block?
+
+
+
+ InterThread Communication:
+ ==========================
+
+ Two threads communicate each other
+ by using wait(),notify(),notifyAll(),these methods 
+ available inside java.lang.Object class
+
+The thread which is excepting updation , it has to call wait() method
+and the thread which is performing updation it has to call 
+notify() method. After getting notification the waiting thread
+will get those updations.
+
+
+  java.lang.Object
+  =================
+
+   public void wait();
+
+   public void wait(long mill sec);
+
+    public native void wait(long millsec,long nanosec);
+
+    public native void notify(); -- it call only one waiting thread 
+    
+     public void notifyAll(); -- it call multiple threads in waiting
+                                  based on priority
+
+ note:
+ ====
+
+ when we are working with interthread communication the
+   methods should be synchronized other wise you will
+   get RE: IllegalMonitorStateException
+   
+
+  Example:
+  ========
+   1)Create a class Customer it contain two methods
+     withdrawal() and deposit() and create
+    a communication between two thread one thread has to
+     call withdrawal() and another has to deposit the amount
+
+
+   sol:
+   ----
+
+       public class Customer{
+
+        int amount=10000; 
+   
+        public synchronized void withrawal(int amount){
+
+     if(this.amount<amount){
+    
+      System.out.println("Customer has to wait untill 
+                    deposit the amount");
+
+     try{
+
+           wait();
+
+            Thread.sleep(1000);
+        }catch(Exception e){ system.out.println(e.getMessage())};
+
+     }
+
+        this.amount=this.amount-amount;
+
+         System.out.println("Balance amount is "+this.amount);
+
+      }
+
+    
+       public synchronized void deposit(int amount){
+
+        
+          this.amount= this.amount+amount;
+            
+         System.out.println("Amount is depostied customer has to
+                      withdrawal");        
+
+           notify();
+           
+      }
+
+     }
+
+   
+  2) public class ExampleOnWithdrawal extends Thread{
+
+
+       Customer c;
+
+            public ExampleOnWithdrawal(Customer c){
+
+
+                  this.c=c;
+
+             }
+
+            public void  run(){
+
+                 c.withdrawal(15000);
+
+        }
+ 
+     }
+   
+  3) public class ExampleOnDeposit extends Thread{
+
+          Customer c;
+
+          public ExampleOnDeposit(Customer c){
+             this.c=c;
+           }
+            
+       public void run(){
+
+
+         c.deposit(30000);
+
+        }
+
+
+      }
+   
+  4)  public class Test1{
+
+        public static void main(String args[]){
+
+      
+          Customer c  = new Customer();
+
+    
+            ExampleOnWithdrawal t = new ExampleOnWithdrawal(c);
+
+           t.start();
+
+           ExampleOnDeposit t1 = new ExampleOnDeposit(c);
+
+          t1.start();
+
+         
+       }
+       }
+
+
+  }   
+
+     
+note:
+=====
+
+ 
+
+
+
+
+    
+ JAVA IO PACKAGE:
+ ================
+  
+
+     Most programs need to access external data. 
+     Data is retrieved from an input source. 
+     Program results are sent to output destination. 
+
+    We require this package to read the data from files and
+      to write the data into files.
+
+   
+       We can read and write the data into file 
+      in two ways 
+      1)character
+      2)byte(Stream)
+
+
+       1)character:
+         ==========
+
+            1)File
+            2) FileWriter
+            3) FileReader
+            4)BufferedWriter
+            5)BufferedReader
+            6)PrintWriter
+
+     1) File:
+     ========
+             syntax:
+         ======
+
+         File f  = new File("path of the file");
+
+        ex:
+        ===
+
+         File f = new File("D:\temp.txt");
+
+     note:
+     ======
+     The javacomplier will check whether file is availabe or not
+     if not available the File class will not create that file.
+
+
+
+     to create a file:
+     =================
+
+     f.createNewFile();
+
+
+
+
+       Directory:
+       ----------===
+
+       File f = new File("D:\DEMO");
+  
+     note:
+     ======
+     The javacomplier will check whether folder is availabe or not
+     if not available the file class will not create that folder.
+
+
+        to create a Directory :
+        =====================
+   
+             f.mkdir();
+   
+             
+    methods:
+   ---------------
+
+   boolean isFile();
+   boolean isDirectory();
+   String[] list(); -- it will list all directory and subdirectories
+                        and files.
+
+
+
+   2)FileWriter:
+   =============
+
+   This class is used to write character data into a File
+
+    Constructor:
+    ============
+
+     1)FileWriter fw = new FileWriter(String file);
+
+     2)FileWriter fw = new FileWriter(File file);
+
+      
+    Methods:
+   ==========
+    void write(int ch);
+     void write(Char ch[]);
+     void write(String);
+      void flush(); -- it will guarantee that last character
+                            written into a file.
+ 
+      void close();-- to close the FileWrite Object
+ 
+   Example:
+   ---------
+   
+   1) write a java program to write some data into a
+        file c:\\simple.txt using FileWriter.
+
+   sol:
+   =====
+
+     public class ExampleOnFileWriter{
+
+      public static void main(String args[]){
+          
+     FileWriter fw = new FileWriter("D:\\simple.txt");
+
+         //write(int i)
+
+        fw.write(100); //d
+       
+        fw.write("\n");
+
+        //write (char ch[]);
+
+        char ch[] = {'a','b','c'};
+
+        fw.write(ch);
+
+       //write(String)
+       
+       fw.write("\n welcome to java");
+
+      fw.flush();
+
+      fw.close();   
+    }}
+
+   FileReader:
+   ===========
+
+   FileReader  is used to  read the characters data from
+    the file.
+
+   Constructor:
+  ==============
+
+    FileReader fr  = new FileReader("path of the file to read");
+
+    methods:
+    ========
+
+    int read();  -- it will read the characters until its become   -1
+
+    int read(Char ch[]);
+
+    void close();
+
+
+    Example:
+    ========
+
+   1) write a java program to read the character data from c:\\Data.txt file
+     using FileReader 
+
+
+    sol    
+     ----
+   public class ExampleOnFileReader{
+
+       public static void main(String args[]){
+
+       FileReader fr  = new FileReader("E:\\Data.txt");
+
+          
+     int i = fr.read();
+
+     while(i!=-1){
+      System.out.print((char)i);
+
+        i= fr.read();
+
+    }
+    fr.close();
+    }
+  }
+
+
+
+  BufferedWriter:
+  ===============
+  TO write character data or text data into a file.
+
+  to solve the problem of Filewriter  \n
+
+
+  Java BufferedWriter class is used to provide buffering for Writer instances. 
+  It makes the performance fast. It inherits Writer class. 
+
+  constructors:
+  ==================
+  1)BufferedWriter bw= new BufferedWriter(Writer w);
+
+  2) BufferedWriter bw= new BufferedWriter(Writer w,int buffersize)
+ 
+  methods of BufferedWriter:
+  ================================
+
+ 1) write(int ch)
+ 
+  to write single characters to the file
+
+ 2) write(char[] ch)
+
+ 3) write(String s)
+
+ 4) flush()
+
+ 5) close();
+
+ 6) newLine()
+    --------------- to insert a line seperator
+
+  
+   Example:
+   ========
+   
+   WAP to write character data into a file D:\\temp.txt
+
+     sol:
+    =====
+
+     public class ExampleOnBufferedWriter{
+      public static void main(String args[]){
+
+            FileWriter fw = new FileWriter("E:\\temp.txt")
+           BufferedWriter bw = new BufferedWriter(fw);
+
+          //write(int i);
+
+          bw.write(100);
+          bw.newLine();
+    
+          //write(String);
+
+         bw.write("welcome to java");
+
+          bw.newLine();
+         
+        //writer(char ch[]);
+   
+           char ch[] =  { 'a','b','c'};
+
+          bw.write(ch);
+
+          bw.flush();
+
+       bw.close();
+     
+ }
+ }            
+    
+
+  BufferedReader:
+ ==================              
+  BufferedReader is used to read characters data from file;
+ 
+ 1. BufferedReader br = new BufferedReader(Reader r);  
+ 2. BufferedReader br = new BufferedReader(Reader r,int buffersize);
+
+  methods:
+  ========
+
+  1) int read() --- unitl character will become   -1
+
+  2) int read(char[] ch)
+
+  3) void close();
+
+  4)String readLine()
+       
+ 
+     
+   Example:
+   ========
+
+   WAP to read character from the file E:\\temp_read.txt
+
+   sol:
+   ====
+
+    public class ExampleOnBufferedReader
+   {
+
+        public static voia main(String args[])          
+  {
+
+      FileReader fr = new FileReader("E:\\temp_read.txt");
+
+      BufferedReader br = new BufferedReader(fr);
+
+        String s = br.readLine();   //it will read first line from file
+
+             System.out.println(s);
+
+
+    }
+ } 
+
+ PrintWriter:
+ ============
+
+ Printwriter  is used to write any type of data into a file.
+
+  constructors:
+  =============
+
+  PrintWriter pw = new PrintWriter(String name);
+  PrintWriter pw = new PrintWriter(File f);
+  PrintWriter pw = new PrintWriter(Writer w);
+
+  methods:
+  ========
+   write(int i);
+   write(char ch);
+   write(String n);
+   flush();
+    close();
+     print(char c);
+     print(int i);
+     print(double d);
+     print(String s);
+     print(boolean b);
+   .......
+
+   example:
+   ========
+
+   1) Write a java program to write text into a file using
+      printWriter
+
+   sol:
+   ====
+    public class ExampleOnPrintWriter
+    {
+       public static void main(String args[]){
+
+         FileWriter fw = new FileWriter("E:\\print_out.txt");
+       PrintWriter pw  = new PrintWriter(fw);
+     
+          //write(int i);
+         pw.write(100); //d 
+          pw.println(100); //100 
+
+       pw.println("welcome to java");
+
+       pw.println(120.0);
+       
+       pw.println(true);
+
+       pw.flush();
+       pw.close();
+
+   }}    
+
+
+
+      }
+
+   }  
+
+conclusion:
+============
+
+1)FileReader and BufferedReader(br -Recommended)
+
+2) FW,BW and PW  (pw is Recommended)
+
+conclusion:2
+=============
+
+=>binary data(video file,audio files,images)==streams class
+
+===InputStream   is   to read binary data 
+
+===to write binary data into file using outputStream
+
+  InputStreamReader
+  FileInputStream
+  DataInputStream is a subclass of FilterInputStream
+ 
+  OutputStreamWriter
+  FileOutputStream
+  DataOutputStream
+
+  Example:
+  =========
+   1)wAP to read the data from a file(temp.txt) and write the data 
+     into sample.txt using FileInputStream and FileOutputStreaam
+
+
+   
+
+
+
+
+
+
+
+
+
+
+conclusion:3
+============
+
+Object->Writer and Reader are (Abstract class) child class of object
+
+OutputStreamWriter is child class of Writer
+
+FileWriter is child class of OutputStreamWriter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Serialization:
+ ==============
+
+  Serialization is process of saving or writing state of an
+  Object into a file is called Serialization
+
+  Serializable  is a marker interface
+
+  What is Serializable Class?
+
+  A class which implements Serializable interface ,then
+  corresponding class is called Serizlizable class.
+
+
+ Example:
+ =========
+
+  1)WAP which implements Serializble interface 
+     this class contain two instance variables
+      and one method
+ 
+  2) convert above class into file.ser
+
+
+ 1)
+  sol:
+  ====
+  public class ExampleOnSerialization implements Serializable{
+             
+        
+       int a=10;
+   
+       int b=20;
+
+      public void methodOne(){
+ 
+       System.out.println("We are in method one of ExampleOnSerialization");
+
+     }
+
+    }
+
+
+ 2)public class Test{
+
+       public static void main(String args[]){
+       
+         ExampleOnSerialization et = new ExampleOnSerialization();
+
+    FileOutputStream fos = new FileOutputStream("D:\\DEMO\\file.ser");
+
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+    
+       oos.writeObject(et);//this method is convert the class object into file.
+
+    oos.close();
+   System.out.println("Serailization Completed");
+
+     }
+     } 
+    
+
+
+  De-serialization:
+  =================
+ 
+   The process of converting file into appropriate Object
+   is called Deserialization
+
+   Example:
+   ========
+
+    1)Write a java program to convert file.ser into
+     it corresponding ExampleOnSerialization class.
+
+  sol:
+  ===
+   public class ExampleOnDeSerz{
+
+    public static void main(String args[]){
+
+     FileInputStream fis = new FileInputStream("D:\\DEMO\\file.ser");
+     ObjectInputStream ois = new ObjectInputStream(fis);
+
+     Object o = ois.readObject();//this method is responsible to 
+                                                      //   covert file into an object
+    //converting super class object(o) into sub class(corresponding class)
+      ExampleOnSerialization eos =(ExampleOnSerialization) o;
+
+       System.out.println(eos.a);
+       System.out.println(eos.b);
+
+        eos.methodOne();   
+
+        ois.close();
+
+        }
+  }
+
+
+
+
+
+  transient:
+  ==========
+    
+   suppose a variable is declared using transient Keyword
+   the variable will not particpate in the process of
+   Serialization
+   
+   note:
+   =======
+    JVM will replace the value of transient variable
+    with its default value of its type.
+
+  
+   Example:
+   ========
+
+   1)write a javaprogram which contain one instance variable
+   of type int  with transient and on more variable
+   of int  and one method.
+
+   2) convert above class object into file using serialization
+
+
+   sol
+   ====
+   1) public class ExampleOnTransient imnplements Serializable{
+             
+        
+       transient int a=10;
+   
+       int b=20;
+
+      public void methodOne(){
+ 
+       System.out.println("We are in method one of ExampleOnTransient");
+
+     }
+
+    }
+
+
+   2)public class Test2{
+
+       public static void main(String args[]){
+       
+         ExampleOnTransient et = new ExampleOnTransient();
+
+
+   FileOutputStream fos = new FileOutputStream("D:\\transient_1.ser");
+
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+    
+       oos.writeObject(et);
+
+    oos.close();
+   System.out.println("Serailization Completed");
+
+     }
+     } 
+    
+
+  3) WAP to convert the transient_1.ser into Object
+ sol:
+ ===
+       public class Test3{
+
+
+         public static void main(String args[]){
+
+     FileInputStream fis = new FileInputStream("D:\\transient_1.ser");
+     ObjectInputStream ois = new ObjectInputStream(fis);
+
+       
+     Object o = ois.readObject();
+
+   
+     ExampleOnTransient eserv =(ExampleOnTransient) o;
+
+
+       System.out.println(eserv.a);
+       System.out.println(eserv.b);
+
+
+        eserv.methodOne();
+
+
+        ois.close();
+
+
+       }   }
+
+ java.io.Console Class:
+ ================
+ the java console class is used to get input from console.
+ it provides methods to read texts and passwords.
+
+ note:
+ ====
+ if you read password using Console class, it will not be displayed to the user.
+
+ How to get the object of Console:
+ ==========================
+
+ Console c = System.console(); //factory method
+
+ 1)WAP to read the username from the Console
+
+ sol:
+ ====
+
+ public class ExampleOnConsole1{
+
+ public static void main(String arg[]){
+
+ //get the Console class Object
+
+ Console cobj =System.console();
+
+ System.out.println("Enter the username :");
+
+ String un = cobj.readLine();
+
+ System.out.println("welcome "+un)
+
+ }
+
+ }
+
+ WAP to read the password from Console using readPassword():
+ ==================================================
+  public class ExampleOnConsole2{
+
+  public static void main(String arg[]){
+
+  //get the Console class Object
+
+  Console cobj =System.console();
+
+  System.out.println("Enter the password :");
+
+  char ch[]= cobj.readPassword();
+
+  String pwd = String.valueOf(ch); //it will convert char [] into String
+
+  System.out.println(pwd)
+
+  }}
+
+  Assignment:
+  ==========
+  transient  keyword.
+  Date Class
+  LocalDate Class
+  RandomAccessFile Class
+
+
+
+ 1)what is static import?
+
+    import static System.out;
+
+    public static void main(String arg[]){
+
+    out.println("welcome to java");
+  }
+
+  note:
+  =====
+
+   System is a class in java.lang package
+  
+   out is static variable of type PrintStream
+
+
+
+
+
+
+  Draw backs of array:
+  --------------------
+  Array size fixed once declared
+  We can store only similar or homogenous types of elements
+
+  Collections:
+  ============
+  A Collection is a group of individual objects represented as a single unit. 
+  Java provides Collection Framework which defines several classes and 
+  interfaces to represent a group of objects as a single unit.
+
+  The Collection interface (java.util.Collection) and Map interface (java.util.Map) 
+  are the two main “root” interfaces of Java collections.
+
+   List Interface:
+   ===============
+   ArrayList:
+   ----------
+
+  1) ArrayList is class which provide implementations for
+   List interface
+
+  2)ArrayList internally uses re-sizeable (DS)array.
+
+  3)duplicate elements are allowed.
+
+  4)Insertion order is preserved. Heterogeneous and Homogeneous elements are allowed
+
+ note:
+ --------
+=>   In ArrayList by default the capacity is 10.
+
+=>  once the capacity is reaches internally the Arraysize
+        growable as (initialcapacity *3/2)+1
+
+  1)WAP to insert some Objects into ArrayList.
+
+  2)Write a javaprogram to store only String object into arraylist 
+    using generics.
+
+   Generics are used to specify type of data to store into an Collection.
+
+   Syntax:
+  =======
+   Classname <T> referencevariable = new ClassName<T>()
+
+   note:
+   ====
+  1)Generic type should be a Wrapper class.
+  
+   byte   ----Byte   
+   int       ---Integer
+   float     --Float
+   double   --Double
+   long       --Long
+  
+
+  2) Generic Type can be a Referenced Classes also.
+     ex: String or UserDefined Class(javabean class,model)
+
+ Example:
+ --------------   
+  WAP to store Employee(javabean) class Object into ArrayList and
+    display the  Employees details empId,empName,empSal  using generics
+
+      
+ Iterator
+ ========
+
+ hasNext() - boolean
+
+ next() ---Object
+
+ remove(Object o)--void;
+
+
+ ListIterator:
+ =============
+
+  hasNext() - boolean
+  next() ---Object
+
+remove(Object o)--void;
+
+hasPrevious() - boolean
+
+previous() ---Object
+
+remove(Object o)--void;
+
+
+  what is  hashCode() and equals()?==>java.lang.Object?
+  why to override the hashCode() and equals()?
+  What is the Contract between hashCode() and equals()?
+
+
+  LinkedList: 
+  ============
+
+   LinkedList is a class Which Implements List Interface
+
+   LinkedList internally uses double-linked list datastructure .
+
+   Duplicated values are allowed
+  
+   Insertion Order is preserved
+
+   null elements can be allowed
+
+   heterogeneous and Homogeneous elements are allowed
+
+
+  1) WAP to add elements into LinkedList Object
+
+  2) WAP to store only  String Objects into LinkedList using Generics and
+    display the elements
+ 
+
+  3)WAP to store Course(courseId,courseName,fee) class Object into Linked List
+  using generics and display the elements(courseid,courseName,fee) using ListIterator Forward direction and
+  backward direction.
+
+
+ ex:
+ ===
+ public class Course{
+    private int cid;
+    private String cname;
+   //constructor
+   //settters and getters methdod
+
+ }
+
+   
+ Vector -->Assignment
+ ============
+ Vector class is legacy class (jdk 1.0)and is a thread safe class
+ 
+ Vector  is a implementation class for List interface.
+
+ Duplicates are allowed
+
+ insertion order is preserved
+
+Example:
+=======
+
+1)WAP to store the elements or objects into vector 
+
+
+Ex:-Stack is Assignment
+
+
+
+ 
+
+  SET:
+  ====
+   
+    1) It is a child interface of Collection
+    2)Duplicates are not allowed
+    3)Insertion order is  not preserved
+    
+    Set interface is used to represent unique objects
+    as single entity.
+
+    Classes:
+    ======
+    HashSet
+    LinkedHashSet 
+    interfaces-->Set-->SortedSet-->NaviagableSet-->TreeSet Class
+    note(using TreeSet class we can store Homogeneous elements)
+
+
+
+ Set:
+ ====
+ 1)HashSet:
+    ==========
+    HashSet is class which provide implementation for Set Interface
+    HashSet is class internally uses Data Structure is HashTable
+   
+    2)Duplicates are not allowed
+    3)Insertion order is  not preserved(it will display the element in random order)
+	heterogeneous and Homogeneous elements are allowed
+    Constructors:
+     ===========
+
+    HashSet hs = new HashSet();
+
+    by default capacity is 16 elements
+
+    HashSet hs = new HashSet(int capacity);
+
+    HashSet  hs  = new HashSet(Collection c);
+
+   
+Example:
+=======
+
+ 1)WAP to add the elements in HashSet 
+
+
+ 2) WAP to add product class object into HashSet using Generics
+    and display the product elements using iterator
+
+  public class Product{
+
+      private int pid;
+      private String pname;
+      private float price;
+    
+    //constructors
+    //setters and getters
+  }
+
+
+
+
+
+
+
+
+
+   
+  2)LinkedHashSet:
+    ===================
+     Duplicates are not allowed
+   
+     Insertion order is preserved
+
+     null values are allowed
+
+     Heterogeneous and Homogeneous elements are allowed
+
+    LinkedHashSet internally uses DataStructure is
+       hashtable and doublelinked list.
+
+    constructor:
+    =============
+
+     LinkedHashSet lhs = new LinkedHashSet();
+
+     LinkedHashSet lhs = new LinkedHashSet(int capacity); 
+
+     LinkedHashSet lhs = new LinkedHashSet(Collection c);
+
+
+     1)WAP to add elements in to LInkedHashSet Object and display the
+      elements using iterator
+
+    2) WAP to add javabean class Item class(itemid,itemName,itemPrice)
+       into linkedHashSet usign Generic and display the itemid,itemName and itemPrice using
+        iterator
+
+
+
+    TreeSet:
+    ========
+    TreeSet is a implementation  class for  NavigableSet(I)->SortedSet(I)->Set(I)
+
+sd
+ 
+    Null also not allowed
+
+    We can store only homogeneous elements .
+
+    In Treeset internally it supports natural sorting order(using Comparable interface),
+    so that elements displayed in ascending order
+
+    TreeSet Internally uses DataStructure is  Balanced-Tree
+
+    Constructors:
+    =============
+
+     TreeSet ts = new TreeSet();
+
+     TreeSet ts = new TreeSet(Comparator);
+
+     TreeSet ts = new TreeSet(Collection c);
+
+    Example 
+    =======
+    1)WAP to add integers element into TreeSet
+   
+    2)WAP to add String elements into TreeSet 
+
+    3)WAP to add Employee (javabean) class into TreeSet and 
+      Display the element in ascending order based on empId
+  
+
+
+
+    note:
+    =====
+     TreeSet ts = new TreeSet();
+
+
+    1)first it will check whether Object type(element) which 
+      implements camparable interface or not.
+
+    2) if it implements comparable interface  then elements
+      will display in natural sorting order
+  
+      
+  
+   
+   Ex:
+   ====
+
+    TreeSet s = new TreeSet();
+
+    s.add("hello");
+    s.add("welcome");
+
+    s.add(new StringBuffer("java")); //castCastException
+    s.add(10);//class Cast Exception
+
+
+   in above example String implements Comparable interface
+   then we wont get any ClassCastException
+
+   But StringBuffer class will not implement
+   comparable interface then we will get error ClassCastException
+
+  note:
+  =====
+   String and all Wrapper classes by default implements 
+   Comparable interface.
+      
+   what is comparable class?
+   ==========================
+
+    A class Which provide the implementation for Comparable 
+    interface  then corresponding class is said to be comparable class.
+
+    interface(comparable):
+   =======================
+ 
+    interface Comparable {
+
+        int compareTo(Object obj);
+
+   }  ---java.lang.Comparable
+
+
+   
+   Comparator
+   ==========
+
+   1)if we want to store heterogeneous elements
+       and display the elements in custom sorting order
+       then we should go for Comparator interface
+
+   2)This interface available in java.util.Comparator
+      this interface contains two methods
+        
+   public interface Comparator<T>{
+        int compare(T obj1,T  obj2);
+        ...
+   }
+
+      What is Comparator class?
+
+      A class which provide implementation for Comparator interface
+       for custom sorting and heterogeneous elements
+        to store inside TreeSet Object then corressponding
+        class is said to be Comparator class.
+   
+     3)we need to pass this Comparator Class Object
+       to TreeSet parameterized Constructor to sort the elements in descending
+       order and to store heteorgenious elements.
+
+    4)to compare the Objects
+ 
+    Ascending order
+   --------------------------
+     1) if Obj1 is lessthan Obj2 then it will return  -1
+     2)if Obj1 is greater than Obj2 then  it will return 1
+     3)if obj1 equals to Obj2 then it will return 0
+
+  descending order
+   --------------------------
+     1) if Obj1 is lessthan Obj2 then it will return  1
+     2)if Obj1 is greater than Obj2 then  it will return -1
+     3)if obj1 equals to Obj2 then it will return 0
+
+
+
+   sal compare:
+    ===========
+
+                if(eob1.getSal()>eob2.getSal()) {
+			return 1;
+		}else  {
+			
+			return -1;
+		}
+
+
+
+    
+   Example:
+   ========
+   1)WAP to add Integer elements using generic into TreeSet and
+     display the element in custom sorting order 
+     (descending order using Comparator  interface).
+
+
+  2)WAP to add dissimilar elements into TreeSet and
+   display the element in custom sorting order 
+    (descending order using Comparator  interface)
+
+  3)WAP to add Item class  object into TreeSet  using Generics
+   and display the elements from TreeSet using iterator
+
+ class Item 
+
+
+ {
+     private int id ;
+     private String name;
+     //constructors 
+    //setter and getters
+}   
+
+
+  Assignments:
+  ===========
+  1)Wap to insert integer elements into ArrayList using Generics
+    a)Display the elements using iterator
+    b)while read the elements try to remove integer object(Scanner using iterator 
+    c)While reading add an new element into ArrayList 
+        if (c)not possible it will throw Exception ,i need that Exception Name
+      either ConcurrentModificationClassException or UnSupportedOperationException
+         
+
+     2)What is meant by Comparable(interface) class?
+       a)Which predefined classes implement this Comparable Interface
+
+ 
+
+    Example:
+    ========
+
+    1) create a class named as Employee with
+      two instance variables String name,int id
+
+    2)create class to store employee object  inside 
+      TreeSet
+
+    
+  MAP:
+  ====
+   Map is a interface
+
+   Map is not Child not a interface of Collection
+   
+   To represent group of key, value pairs as a single entity
+   then we need to go for Map
+
+   DUplicate Keys are not allowed ,values can be duplicated
+
+   we can store hetergeneous and homogeneous type of data.
+  
+   we can store null key and value only once.    
+     
+  Implementation Classes 
+  ======================
+
+   HashMap
+   LinkedHashMap
+   TreeMap --(we can store only Homogeneous key type values)
+
+  NOTE:
+  ====
+   Key,value --Paired  -key is an Object
+                                 --value is an Object
+
+   key,value --this paired is called as EntrySet. 
+   ex: 1001=Raju
+
+
+   
+  1)HashMap :
+   ==========
+   Duplicate keys are not allowed and values can be duplicated
+
+   Insertion order is not preserved
+   
+   underline Datastructure is Hashtable.
+
+   Hetergeneous and Homogeneous keys are allowed
+   
+   methods:
+   ========
+   put(Object key,value Object value);
+   get(Object o);
+   Set  entrySet();
+   containsValue(Object o);
+   remove(Object Key) 
+   values();   
+   
+   Constructors:
+   =============
+
+    HashMap hm = new HashMap();
+    by default capacity is 16 elements
+
+    Hashmap hm = new HashMap(Int initialCapacity);
+
+    1 )WAP to store key,value pairs inside HashMap Object
+ 
+   2) WAP to store  Key as Integers and Values are String 
+     into HashMap using Generics and display the key,value pairs 
+    using iterator 
+   3) WAP to store Key as Integer and Value as a UserDefined ClassObject
+      is Student(sid,sname,marks)  into HashMap and display the values(Student) 
+    from HashMap using iterator.
+       
+
+
+   LinkedHashMap:
+   ==============
+   Duplicate keys are not allowed and values are duplicates
+
+   Insertion order is preserved based  on key 
+
+   underline DataStructure is linked-list and hashtable.
+
+   Homogeneous and hetergeneous key,value pairs are allowed
+
+
+  1)WAP to Add Key,value pairs into LinkedHashMap
+
+
+   TreeMap:
+   =========
+  
+   TreeMap  underlying Datastrucure is RED-BLACK tree based alogrithm.
+
+   In TreeMap the key should be Homogeneous type
+    and values can be  heterogeneous.
+
+   it display the elements in natural sorting order(ascending order)
+     based on key.
+      
+   Duplicate key are not allowed
+ 
+  null keys are not allowed and multiple null values are allowed
+
+  TreeMap(c)->--NavigableMap(I)-->--SortedMap(I)-->Map(I)
+    
+   Constructors:
+   ==============
+   
+    TreeMap tm = new TreeMap();
+    TreeMap tm = new TreeMap(Comparator c);
+    TreeMap tm = new TreeMap(Map m);
+ 
+  
+   1) WAP to add Integer key and hetergenous values  into TreeMap
+
+
+
+   2) WAP to  Book(bid,bname,author) java bean
+        class Object as  key and value is string into TreeMap  using Generics and display the
+        Bookdetails using enhanced For loop.
+
+
+
+
+        
+
+     
+
+
+
+
+
+
+      Interface Map{
+
+    ----put(Object key,Object value);
+-----------
+     Interface Entry{
+             
+       Object getKey();
+        Object getValue();
+        setValue(Object o); 
+
+         }
+  }  
+    note:
+    =====
+
+   to store heterogeneous keys and heterogeneous values
+   inside TreeMap we need to go for Comparator interface.
+
+   Example:
+   ========
+
+   1)WAP to store Heterogenous as key type and
+      hetergeneous values inside TreeMap.
+    note:
+    -----
+   by using Comparator Class
+  
+  
+  self-study:
+  ============
+
+   1)Hashtable
+   2)vector
+   3)IdentityHashMap
+   4)WeakHashMap
+   5)Queue(PriorityQueue,BlockingQueue) 
+
+  
+  6)to sort List Object in  ascending
+  ==================================
+
+   Collections.sort(--ArrayListobject/LinkedListObject--);
+
+   note:
+   ======
+   for sorting in ArrayList/LinkedList we need to store homogeneous.
+
+
+  7)INArrayList/LinkedList Hetegeneous elements sorting:
+  ====================================================
+
+   Collections.sort(ArrayList/LinkedList,Comparator c);
+
+   note:
+   =====
+   for custom sorting and hetergeneous we need to go for
+    Comparator class.
+
+      
+  8)Object[] toArray() -- to convert list Object into Object Array.
+   
+  
+  
+  
+
+
+  
+
+   
+
+  
+     
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+ 
+        
+
+         
+    
+      
+
+   
+ 
+
+
+
+
+
+
+
 
 
 
