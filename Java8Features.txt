@@ -1,0 +1,109 @@
+Java 8 Interface Changes – default method and static method:
+============================================================
+
+Interface in java can only have abstract methods. All the methods of interfaces are public & abstract Only.
+
+Java 8 allows the interfaces to have default and static methods. 
+
+The reason we have default methods in interfaces is to allow the developers to add new methods to the interfaces without affecting the classes that implements these interfaces.
+
+default method:
+
+For example, if several classes such as A, B, C and D implements an interface XYZInterface then if we add a new method to the XYZInterface, we have to change the code in all the classes(A, B, C and D) that implements this interface. 
+
+In this example we have only four classes that implements the interface which we want to change but imagine if there are hundreds of classes implementing an interface then it would be almost impossible to change the code in all those classes. 
+
+This is why in java 8, we have a new concept “default methods”. These methods can be added to any existing interface and we do not need to implement these methods in the implementation classes mandatorily, thus we can add these default methods to existing interfaces without breaking the code.(Backword compatability ->with out changeing the older code)
+
+Static methods:
+
+Static methods interfaces are similar to the default methods except that we cannot override these methods in the classes that implements these interfaces.
+
+
+Lambda expression :
+====================
+A lambda expression in Java has these main parts:
+Lambda expression only has body and parameter list.
+1. No name – function is anonymous so we don’t care about the name
+2. Parameter list
+3. Body – This is the main part of the function.
+4. No return type – The java 8 compiler is able to infer the return type by checking the code. you need not to mention it explicitly.
+
+
+Case1:
+====
+public void methodOne(){
+System.out.println("welcome to lamdba expression");
+
+}
+
+++---->lamda expresssion
+
+()=>{System.out.println("welcome to lamda expression");}
+
+Case2:
+======
+
+public void additionOFTwoNumbers(int x,int y){
+  int z = x+y;
+   Sysout(z);
+}
+
++++++>convert above code into lamda expression
+
+(int x,int y) -> {
+                    int z = x+y;
+                    sysout(z);
+                   }
+
+
+or
+
+(x,y) ->{ return x+y;}
+
+
+Case3:
+======
+
+public int additionOFTwoNumbers(int x,int y){
+  int z = x+y;
+   Sysout(z);
+}
+
++++++>convert above code into lamda expression
+
+(int x,int y) -> x+y;
+
+or 
+
+(x,y) -> x+y;
+
+
+
+Where to use the Lambdas in Java:
+=================================
+To use lambda expression, you need to either create your own functional interface or use the pre defined functional interface provided by Java. 
+
+An interface with only single abstract method is called functional interface(or Single Abstract method interface), for example: Runnable, callable, ActionListener etc.
+
+
+
+
+
+
+
+Method Reference:
+==================
+Java 8 introduced a new feature “Method Reference” which is used to refer the methods of functional interfaces. It is a shorthand notation of a lambda expression to call a method. We can replace lambda expression with method reference (:: operator) to separate the class or object from the method name.
+
+
+Assignment
+==========
+Method Reference
+Streams
+Search examples based on lamda expression with help functional interface.
+
+
+
+
+
