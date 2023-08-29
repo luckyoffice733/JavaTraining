@@ -1,26 +1,24 @@
-package com.training.arrays;
+package com.training.exception;
 
 public class ExampleOnArrays {
 
 	public static void main(String[] args) {
 		
-		//array declaration and initialization at time
-		        //a[0],a[1],a[2],a[3],a[4]
-		int []a= {30,10,50,20,40};
+		System.out.println("statement-1");
+		System.out.println("statement-2");
 		
-		System.out.println("No of elements in  array name is a : "+a.length);
+		try {
+		int arr[]= {40,30,50,60,20}; //no of elements in 5
 		
-		System.out.println("Displaying the elements using forloop");
-		for(int i=0; i<a.length;i++) {
-			System.out.print(a[i]+" ");
-			
+		for(int i=0;i<=5;i++) {
+			System.out.println(arr[i]);//arr[5]=?
 		}
-		System.out.println("");
-		System.out.println("Displaying the elements using enhanced Foreach Loop");
-		for(int b:a) {
-			System.out.print(b+" ");
+		}catch (ArrayIndexOutOfBoundsException ae) {
+			//System.out.println(ae.getMessage());
+			System.err.println("Actual size of array 5 but search for 6th element it throw error");
 		}
-		
+		System.out.println("statement-3");
+		System.out.println("statement-4");
 		
 	}
 	
