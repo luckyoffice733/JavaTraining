@@ -87,21 +87,163 @@ To use lambda expression, you need to either create your own functional interfac
 An interface with only single abstract method is called functional interface(or Single Abstract method interface), for example: Runnable, callable, ActionListener etc.
 
 
-
-
-
-
-
 Method Reference:
 ==================
-Java 8 introduced a new feature “Method Reference” which is used to refer the methods of functional interfaces. It is a shorthand notation of a lambda expression to call a method. We can replace lambda expression with method reference (:: operator) to separate the class or object from the method name.
+Java 8 introduced a new feature “Method Reference” which is used to refer the methods of functional interfaces. It is a shorthand notation of a lambda expression to call a method. 
+
+We can replace lambda expression with method reference (:: operator) to separate the class or object from the method name.
+
+Method Reference(::) Java 8 to implement Functional interfaces with even lesser code again than lambda expressions and this time we get the benefit of code re-usability as well, because we don’t provide an implementation for functional interface. Instead, we provide reference to already existing method (with similar argument types) to simplify the implementation of the functional interface using a double colon (::) operator. This process of providing reference to pre-existing method is called Method reference.
+
+Three Types of method references:
+
+1)MethodReference  to an instance method of Object
+   syntax:  object::instanceMethod
+
+2)Method Reference to an static method of a class
+ syntax : ClassName::staticMethodName
+
+3)Method Reference to a constructor-
+  Syntax: ClassName::new
 
 
-Assignment
-==========
-Method Reference
-Streams
-Search examples based on lamda expression with help functional interface.
+Streams:
+========
+To process objects of the collection, in 1.8 version Streams concept introduced.
+
+What is the differences between java.util.streams and java.io streams?
+======================================================================
+java.util streams meant for processing objects from the collection. 
+Ie, it represents a stream of objects 
+from the collection but java.io streams meant for processing binary and character data with respect to 
+file.
+i.e it represents stream of binary data or character data from the file .hence java.io streams and 
+java.util streams both are different
+
+What is the difference between collection and stream?
+=====================================================
+if we want to represent a group of individual objects as a single entity then 
+we should go for collection.
+if we want to process a group of objects from the collection then we should 
+go for streams.
+
+we can create a stream object to the collection by using stream()method of Collection interface. 
+stream() method is a default method added to the Collection in 1.8 version.
+
+default Stream stream()
+Ex:
+Stream s = c.stream();//factory method//clone()//Class.forName().
+
+Stream is an interface present in java.util.stream.
+==================================================
+once we got the stream, by using that we can process objects of that collection.
+
+we can process the objects in the following two phases
+1.configuration
+2.processing
+
+1.configuration:
+we can configure either by using filter mechanism or by using map mechanism.
+
+Filtering:
+we can configure a filter to filter elements from the collection based on some boolean condition by 
+using filter()method of Stream interface.
+
+public Stream filter(Predicate<T> t)
+
+here (Predicate<T > t ) can be a boolean valued function/lambda expression
+
+Ex:
+Stream s=c.stream();
+Stream s1=s.filter(i -> i%2==0);
+
+Hence to filter elements of collection based on some boolean condition we should go for 
+filter()method
+
+Mapping:
+If we want to create a separate new object, for every object present in the collection based on our 
+requirement then we should go for map () method of Stream interface.
+
+public Stream map (Function f);
+ It can be lambda expression also
+
+Ex:
+Stream s = c.stream();
+Stream s1 = s.map(i-> i+10);
+Once we performed configuration we can process objects by using several methods.
+
+2.Processing:
+============
+processing by collect() method 
+Processing by count()method
+Processing by sorted()method
+Processing by min() and max() methods
+forEach() method
+toArray() method
+Stream.of()method
+
+Ex:
+===
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class TestOnStreamConfiguringAndProcessing {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> l1 = new ArrayList<Integer>(); 
+		l1.add(0); 
+		l1.add(15);
+		l1.add(10); 
+		l1.add(5);
+		l1.add(30);
+		l1.add(25); 
+		l1.add(20); 
+		System.out.println(l1);	
+		
+		//map is used to process the each object
+		List<Integer> l2=l1.stream().map(i-> i+10).collect(Collectors.toList()); 
+		System.out.println(l2);
+		
+		//counting the even objects from the l1 
+		System.out.println("Even numbers");
+		l1.stream().filter(i->i%2==0).forEach(System.out::println); 
+		//System.out.println(count); 
+		
+		Long count=l1.stream().filter(i->i%2==0).count();
+		System.out.println("Even Numbers "+count); 
+		
+		//by defaulting it will display in insertion order we can convert into 
+		//sorted order (ascending order)
+		List<Integer> l3=l1.stream().sorted().collect(Collectors.toList()); 
+		System.out.println("Sorteing Order Ascending:");
+		System.out.println(l3); 
+		
+		//
+		Comparator<Integer> comp=(i1,i2)->i2.compareTo(i1); 
+		List<Integer> l4=l1.stream().sorted(comp).collect(Collectors.toList());
+		System.out.println("Custom Sortin Descennding Order:");
+		System.out.println(l4); 
+		
+		//min number from the group of integers
+		Comparator<Integer> comp1=(i1,i2)->i1.compareTo(i2); 
+		Integer min=l1.stream().min(comp1).get(); 
+		System.out.println("min value is :"+min);
+		
+		Integer max=l1.stream().max(comp1).get(); 
+		System.out.println("max value is :"+max);
+		System.out.println("FirstWay");
+		l3.stream().forEach(i->System.out.println(i)); 
+		
+		System.out.println("SecondWay");
+		l3.stream().forEach(System.out::println); 
+
+
+
+
 
 
 
